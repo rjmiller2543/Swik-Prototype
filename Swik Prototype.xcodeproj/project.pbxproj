@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		506F54921985DCA500D98368 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54911985DCA500D98368 /* Foundation.framework */; };
+		506F54941985DCA500D98368 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54931985DCA500D98368 /* CoreGraphics.framework */; };
+		506F54961985DCA500D98368 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54951985DCA500D98368 /* UIKit.framework */; };
+		506F549C1985DCA500D98368 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 506F549A1985DCA500D98368 /* InfoPlist.strings */; };
+		506F549E1985DCA500D98368 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 506F549D1985DCA500D98368 /* main.m */; };
+		506F54A21985DCA500D98368 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 506F54A11985DCA500D98368 /* AppDelegate.m */; };
+		506F54A51985DCA500D98368 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506F54A31985DCA500D98368 /* Main.storyboard */; };
+		506F54A81985DCA500D98368 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506F54A71985DCA500D98368 /* ViewController.m */; };
+		506F54AA1985DCA500D98368 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 506F54A91985DCA500D98368 /* Images.xcassets */; };
+		506F54B11985DCA500D98368 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54B01985DCA500D98368 /* XCTest.framework */; };
+		506F54B21985DCA500D98368 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54911985DCA500D98368 /* Foundation.framework */; };
+		506F54B31985DCA500D98368 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54951985DCA500D98368 /* UIKit.framework */; };
+		506F54BB1985DCA500D98368 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 506F54B91985DCA500D98368 /* InfoPlist.strings */; };
+		506F54BD1985DCA500D98368 /* Swik_PrototypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 506F54BC1985DCA500D98368 /* Swik_PrototypeTests.m */; };
+		506F54C91985DF7000D98368 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54C81985DF7000D98368 /* Parse.framework */; };
+		506F54CB1985E00D00D98368 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54CA1985E00D00D98368 /* MobileCoreServices.framework */; };
+		506F54CD1985E01900D98368 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54CC1985E01900D98368 /* SystemConfiguration.framework */; };
+		506F54CF1985E02400D98368 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54CE1985E02400D98368 /* StoreKit.framework */; };
+		506F54D11985E02E00D98368 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54D01985E02E00D98368 /* Security.framework */; };
+		506F54D31985E03700D98368 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54D21985E03700D98368 /* QuartzCore.framework */; };
+		506F54D51985E03E00D98368 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54D41985E03E00D98368 /* CoreLocation.framework */; };
+		506F54D71985E04700D98368 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54D61985E04700D98368 /* AudioToolbox.framework */; };
+		506F54E0198603F900D98368 /* StartBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 506F54DF198603F900D98368 /* StartBar.m */; };
+		506F54E41986107D00D98368 /* StartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506F54E31986107D00D98368 /* StartScreenViewController.m */; };
+		DE4B37A979F746779553FFD0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ACD738E7DF4E9DA9F2605B /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		506F54B41985DCA500D98368 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 506F54861985DCA500D98368 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 506F548D1985DCA500D98368;
+			remoteInfo = "Swik Prototype";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		506F548E1985DCA500D98368 /* Swik Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swik Prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		506F54911985DCA500D98368 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		506F54931985DCA500D98368 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		506F54951985DCA500D98368 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		506F54991985DCA500D98368 /* Swik Prototype-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Swik Prototype-Info.plist"; sourceTree = "<group>"; };
+		506F549B1985DCA500D98368 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		506F549D1985DCA500D98368 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		506F549F1985DCA500D98368 /* Swik Prototype-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swik Prototype-Prefix.pch"; sourceTree = "<group>"; };
+		506F54A01985DCA500D98368 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		506F54A11985DCA500D98368 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		506F54A41985DCA500D98368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		506F54A61985DCA500D98368 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		506F54A71985DCA500D98368 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		506F54A91985DCA500D98368 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		506F54AF1985DCA500D98368 /* Swik PrototypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swik PrototypeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		506F54B01985DCA500D98368 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		506F54B81985DCA500D98368 /* Swik PrototypeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Swik PrototypeTests-Info.plist"; sourceTree = "<group>"; };
+		506F54BA1985DCA500D98368 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		506F54BC1985DCA500D98368 /* Swik_PrototypeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Swik_PrototypeTests.m; sourceTree = "<group>"; };
+		506F54C81985DF7000D98368 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		506F54CA1985E00D00D98368 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		506F54CC1985E01900D98368 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		506F54CE1985E02400D98368 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		506F54D01985E02E00D98368 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		506F54D21985E03700D98368 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		506F54D41985E03E00D98368 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		506F54D61985E04700D98368 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		506F54DE198603F900D98368 /* StartBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartBar.h; sourceTree = "<group>"; };
+		506F54DF198603F900D98368 /* StartBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartBar.m; sourceTree = "<group>"; };
+		506F54E11986093E00D98368 /* SwikDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwikDefinitions.h; sourceTree = "<group>"; };
+		506F54E21986107D00D98368 /* StartScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScreenViewController.h; sourceTree = "<group>"; };
+		506F54E31986107D00D98368 /* StartScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScreenViewController.m; sourceTree = "<group>"; };
+		6CC2B624F0A44A0B9758E611 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D9ACD738E7DF4E9DA9F2605B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		506F548B1985DCA500D98368 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506F54D71985E04700D98368 /* AudioToolbox.framework in Frameworks */,
+				506F54D51985E03E00D98368 /* CoreLocation.framework in Frameworks */,
+				506F54D31985E03700D98368 /* QuartzCore.framework in Frameworks */,
+				506F54D11985E02E00D98368 /* Security.framework in Frameworks */,
+				506F54CF1985E02400D98368 /* StoreKit.framework in Frameworks */,
+				506F54CD1985E01900D98368 /* SystemConfiguration.framework in Frameworks */,
+				506F54CB1985E00D00D98368 /* MobileCoreServices.framework in Frameworks */,
+				506F54941985DCA500D98368 /* CoreGraphics.framework in Frameworks */,
+				506F54961985DCA500D98368 /* UIKit.framework in Frameworks */,
+				506F54921985DCA500D98368 /* Foundation.framework in Frameworks */,
+				DE4B37A979F746779553FFD0 /* libPods.a in Frameworks */,
+				506F54C91985DF7000D98368 /* Parse.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		506F54AC1985DCA500D98368 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506F54B11985DCA500D98368 /* XCTest.framework in Frameworks */,
+				506F54B31985DCA500D98368 /* UIKit.framework in Frameworks */,
+				506F54B21985DCA500D98368 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		506F54851985DCA500D98368 = {
+			isa = PBXGroup;
+			children = (
+				506F54971985DCA500D98368 /* Swik Prototype */,
+				506F54B61985DCA500D98368 /* Swik PrototypeTests */,
+				506F54901985DCA500D98368 /* Frameworks */,
+				506F548F1985DCA500D98368 /* Products */,
+				6CC2B624F0A44A0B9758E611 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		506F548F1985DCA500D98368 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				506F548E1985DCA500D98368 /* Swik Prototype.app */,
+				506F54AF1985DCA500D98368 /* Swik PrototypeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		506F54901985DCA500D98368 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				506F54D61985E04700D98368 /* AudioToolbox.framework */,
+				506F54D41985E03E00D98368 /* CoreLocation.framework */,
+				506F54D21985E03700D98368 /* QuartzCore.framework */,
+				506F54D01985E02E00D98368 /* Security.framework */,
+				506F54CE1985E02400D98368 /* StoreKit.framework */,
+				506F54CC1985E01900D98368 /* SystemConfiguration.framework */,
+				506F54CA1985E00D00D98368 /* MobileCoreServices.framework */,
+				506F54C81985DF7000D98368 /* Parse.framework */,
+				506F54911985DCA500D98368 /* Foundation.framework */,
+				506F54931985DCA500D98368 /* CoreGraphics.framework */,
+				506F54951985DCA500D98368 /* UIKit.framework */,
+				506F54B01985DCA500D98368 /* XCTest.framework */,
+				D9ACD738E7DF4E9DA9F2605B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		506F54971985DCA500D98368 /* Swik Prototype */ = {
+			isa = PBXGroup;
+			children = (
+				506F54DD1986035800D98368 /* Objects */,
+				506F54DC1986034F00D98368 /* Helpers */,
+				506F54DB1986034700D98368 /* Controllers */,
+				506F54DA1986033200D98368 /* View Controllers */,
+				506F54A01985DCA500D98368 /* AppDelegate.h */,
+				506F54A11985DCA500D98368 /* AppDelegate.m */,
+				506F54A31985DCA500D98368 /* Main.storyboard */,
+				506F54A91985DCA500D98368 /* Images.xcassets */,
+				506F54981985DCA500D98368 /* Supporting Files */,
+			);
+			path = "Swik Prototype";
+			sourceTree = "<group>";
+		};
+		506F54981985DCA500D98368 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				506F54991985DCA500D98368 /* Swik Prototype-Info.plist */,
+				506F549A1985DCA500D98368 /* InfoPlist.strings */,
+				506F549D1985DCA500D98368 /* main.m */,
+				506F549F1985DCA500D98368 /* Swik Prototype-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		506F54B61985DCA500D98368 /* Swik PrototypeTests */ = {
+			isa = PBXGroup;
+			children = (
+				506F54BC1985DCA500D98368 /* Swik_PrototypeTests.m */,
+				506F54B71985DCA500D98368 /* Supporting Files */,
+			);
+			path = "Swik PrototypeTests";
+			sourceTree = "<group>";
+		};
+		506F54B71985DCA500D98368 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				506F54B81985DCA500D98368 /* Swik PrototypeTests-Info.plist */,
+				506F54B91985DCA500D98368 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		506F54DA1986033200D98368 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				506F54A61985DCA500D98368 /* ViewController.h */,
+				506F54A71985DCA500D98368 /* ViewController.m */,
+				506F54E21986107D00D98368 /* StartScreenViewController.h */,
+				506F54E31986107D00D98368 /* StartScreenViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		506F54DB1986034700D98368 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		506F54DC1986034F00D98368 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				506F54E11986093E00D98368 /* SwikDefinitions.h */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		506F54DD1986035800D98368 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				506F54DE198603F900D98368 /* StartBar.h */,
+				506F54DF198603F900D98368 /* StartBar.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		506F548D1985DCA500D98368 /* Swik Prototype */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 506F54C01985DCA500D98368 /* Build configuration list for PBXNativeTarget "Swik Prototype" */;
+			buildPhases = (
+				CC212F1CD990431B98687AB4 /* Check Pods Manifest.lock */,
+				506F548A1985DCA500D98368 /* Sources */,
+				506F548B1985DCA500D98368 /* Frameworks */,
+				506F548C1985DCA500D98368 /* Resources */,
+				3A72B76B4359463D8AB50D2E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Swik Prototype";
+			productName = "Swik Prototype";
+			productReference = 506F548E1985DCA500D98368 /* Swik Prototype.app */;
+			productType = "com.apple.product-type.application";
+		};
+		506F54AE1985DCA500D98368 /* Swik PrototypeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 506F54C31985DCA500D98368 /* Build configuration list for PBXNativeTarget "Swik PrototypeTests" */;
+			buildPhases = (
+				506F54AB1985DCA500D98368 /* Sources */,
+				506F54AC1985DCA500D98368 /* Frameworks */,
+				506F54AD1985DCA500D98368 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				506F54B51985DCA500D98368 /* PBXTargetDependency */,
+			);
+			name = "Swik PrototypeTests";
+			productName = "Swik PrototypeTests";
+			productReference = 506F54AF1985DCA500D98368 /* Swik PrototypeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		506F54861985DCA500D98368 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Robert Miller";
+				TargetAttributes = {
+					506F54AE1985DCA500D98368 = {
+						TestTargetID = 506F548D1985DCA500D98368;
+					};
+				};
+			};
+			buildConfigurationList = 506F54891985DCA500D98368 /* Build configuration list for PBXProject "Swik Prototype" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 506F54851985DCA500D98368;
+			productRefGroup = 506F548F1985DCA500D98368 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				506F548D1985DCA500D98368 /* Swik Prototype */,
+				506F54AE1985DCA500D98368 /* Swik PrototypeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		506F548C1985DCA500D98368 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506F54AA1985DCA500D98368 /* Images.xcassets in Resources */,
+				506F549C1985DCA500D98368 /* InfoPlist.strings in Resources */,
+				506F54A51985DCA500D98368 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		506F54AD1985DCA500D98368 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506F54BB1985DCA500D98368 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A72B76B4359463D8AB50D2E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC212F1CD990431B98687AB4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		506F548A1985DCA500D98368 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506F54E0198603F900D98368 /* StartBar.m in Sources */,
+				506F54A81985DCA500D98368 /* ViewController.m in Sources */,
+				506F54A21985DCA500D98368 /* AppDelegate.m in Sources */,
+				506F549E1985DCA500D98368 /* main.m in Sources */,
+				506F54E41986107D00D98368 /* StartScreenViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		506F54AB1985DCA500D98368 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506F54BD1985DCA500D98368 /* Swik_PrototypeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		506F54B51985DCA500D98368 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 506F548D1985DCA500D98368 /* Swik Prototype */;
+			targetProxy = 506F54B41985DCA500D98368 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		506F549A1985DCA500D98368 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				506F549B1985DCA500D98368 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		506F54A31985DCA500D98368 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				506F54A41985DCA500D98368 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		506F54B91985DCA500D98368 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				506F54BA1985DCA500D98368 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		506F54BE1985DCA500D98368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		506F54BF1985DCA500D98368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		506F54C11985DCA500D98368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CC2B624F0A44A0B9758E611 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Swik Prototype/Swik Prototype-Prefix.pch";
+				INFOPLIST_FILE = "Swik Prototype/Swik Prototype-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		506F54C21985DCA500D98368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CC2B624F0A44A0B9758E611 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Swik Prototype/Swik Prototype-Prefix.pch";
+				INFOPLIST_FILE = "Swik Prototype/Swik Prototype-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		506F54C41985DCA500D98368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Swik Prototype.app/Swik Prototype";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Swik Prototype/Swik Prototype-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Swik PrototypeTests/Swik PrototypeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		506F54C51985DCA500D98368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Swik Prototype.app/Swik Prototype";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Swik Prototype/Swik Prototype-Prefix.pch";
+				INFOPLIST_FILE = "Swik PrototypeTests/Swik PrototypeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		506F54891985DCA500D98368 /* Build configuration list for PBXProject "Swik Prototype" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				506F54BE1985DCA500D98368 /* Debug */,
+				506F54BF1985DCA500D98368 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		506F54C01985DCA500D98368 /* Build configuration list for PBXNativeTarget "Swik Prototype" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				506F54C11985DCA500D98368 /* Debug */,
+				506F54C21985DCA500D98368 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		506F54C31985DCA500D98368 /* Build configuration list for PBXNativeTarget "Swik PrototypeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				506F54C41985DCA500D98368 /* Debug */,
+				506F54C51985DCA500D98368 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 506F54861985DCA500D98368 /* Project object */;
+}
