@@ -18,6 +18,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
+        /* just testing that is working correctly */
         // Custom initialization
     }
     return self;
