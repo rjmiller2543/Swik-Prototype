@@ -16,8 +16,16 @@
     if (self) {
         // Initialization code
         self.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.0 alpha:1.0];
+        self.items = @[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(testAction)]];
     }
     return self;
+}
+
+-(void)testAction
+{
+    
+    NSLog(@"up testing...");
+    
 }
 
 /*

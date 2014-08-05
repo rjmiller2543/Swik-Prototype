@@ -21,8 +21,20 @@
         
         /* just testing that is working correctly */
         // Custom initialization
+        UIButton *testButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 100, 100, 40)];
+        testButton.backgroundColor = [UIColor redColor];
+        //testButton.titleLabel = @"Test Action";
+        testButton.tintColor = [UIColor whiteColor];
+        [testButton addTarget:self action:@selector(testAction) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:testButton];
+        
     }
     return self;
+}
+
+-(void)testAction
+{
+    NSLog(@"up up testing...");
 }
 
 - (void)viewDidLoad

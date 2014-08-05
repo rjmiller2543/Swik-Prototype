@@ -20,10 +20,14 @@
     viewController.view.frame = viewController.view.bounds;
     viewController.view.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:1.0 alpha:1.0];
     [self.window setRootViewController:viewController];
+    [self.window addSubview:viewController.view];
     
-    StartBar *startBar = [[StartBar alloc] initWithFrame:CGRectMake(0, 0, 350, 30)];
-    //startBar.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.0 alpha:1.0];
-    startBar.backgroundColor = [UIColor blackColor];
+    StartBar *startBar = [[StartBar alloc] initWithFrame:CGRectMake(0, 0, 350, 60)];
+    //startBar.translucent = NO;
+    startBar.barStyle = UIBarStyleBlackOpaque;
+    startBar.barTintColor = [UIColor redColor];
+    //startBar.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0];
+    //startBar.backgroundColor = [UIColor blackColor];
     [self.window addSubview:startBar];
     
     return YES;
