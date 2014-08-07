@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500D678F1992FCCE00940549 /* electronics.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D678E1992FCCE00940549 /* electronics.png */; };
+		500D67911992FCD800940549 /* puzzle.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D67901992FCD800940549 /* puzzle.png */; };
+		500D67931992FCE800940549 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D67921992FCE800940549 /* star.png */; };
+		500D67951992FD0B00940549 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D67941992FD0B00940549 /* settings.png */; };
+		500D67971992FD1300940549 /* dry.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D67961992FD1300940549 /* dry.png */; };
 		506F54921985DCA500D98368 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54911985DCA500D98368 /* Foundation.framework */; };
 		506F54941985DCA500D98368 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54931985DCA500D98368 /* CoreGraphics.framework */; };
 		506F54961985DCA500D98368 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54951985DCA500D98368 /* UIKit.framework */; };
@@ -45,6 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		500D678E1992FCCE00940549 /* electronics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = electronics.png; sourceTree = "<group>"; };
+		500D67901992FCD800940549 /* puzzle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puzzle.png; sourceTree = "<group>"; };
+		500D67921992FCE800940549 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		500D67941992FD0B00940549 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		500D67961992FD1300940549 /* dry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dry.png; sourceTree = "<group>"; };
 		506F548E1985DCA500D98368 /* Swik Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swik Prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		506F54911985DCA500D98368 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		506F54931985DCA500D98368 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,9 +124,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		500D678D1992FCC100940549 /* Temp Icons */ = {
+			isa = PBXGroup;
+			children = (
+				500D67961992FD1300940549 /* dry.png */,
+				500D67941992FD0B00940549 /* settings.png */,
+				500D67921992FCE800940549 /* star.png */,
+				500D67901992FCD800940549 /* puzzle.png */,
+				500D678E1992FCCE00940549 /* electronics.png */,
+			);
+			name = "Temp Icons";
+			sourceTree = "<group>";
+		};
 		506F54851985DCA500D98368 = {
 			isa = PBXGroup;
 			children = (
+				500D678D1992FCC100940549 /* Temp Icons */,
 				506F54971985DCA500D98368 /* Swik Prototype */,
 				506F54B61985DCA500D98368 /* Swik PrototypeTests */,
 				506F54901985DCA500D98368 /* Frameworks */,
@@ -312,7 +335,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500D67971992FD1300940549 /* dry.png in Resources */,
+				500D67931992FCE800940549 /* star.png in Resources */,
+				500D678F1992FCCE00940549 /* electronics.png in Resources */,
+				500D67911992FCD800940549 /* puzzle.png in Resources */,
 				506F54AA1985DCA500D98368 /* Images.xcassets in Resources */,
+				500D67951992FD0B00940549 /* settings.png in Resources */,
 				506F549C1985DCA500D98368 /* InfoPlist.strings in Resources */,
 				506F54A51985DCA500D98368 /* Main.storyboard in Resources */,
 			);
