@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view setFrame:CGRectMake(0, 60, 320, 25)];
+    [self.view setFrame:CGRectMake(0, 60, 320, 30)];
     UIImageView * filterIconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
     filterIconImageView.image = [UIImage imageNamed:@"dry.png"];
     [self.view addSubview:filterIconImageView];

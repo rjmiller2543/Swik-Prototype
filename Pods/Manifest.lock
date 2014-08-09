@@ -27,6 +27,8 @@ PODS:
   - MJPopupViewController (0.4)
   - MLPAccessoryBadge (1.0)
   - MSPullToRefreshController (1.1.0)
+  - Parse (1.2.20):
+    - Facebook-iOS-SDK (~> 3.11)
   - pop (1.0.6)
   - SDWebImage (3.7.1):
     - SDWebImage/Core
@@ -41,6 +43,7 @@ DEPENDENCIES:
   - MJPopupViewController (~> 0.4)
   - MLPAccessoryBadge
   - MSPullToRefreshController (~> 1.1.0)
+  - Parse
   - pop (~> 1.0)
   - SDWebImage
   - SVProgressHUD (HEAD)
@@ -54,6 +57,7 @@ SPEC CHECKSUMS:
   MJPopupViewController: b087684832981731f3d11b7a2ae6293a9073e011
   MLPAccessoryBadge: 7e553c0c3b74c1d6ae269c48fadc84ce0c4ac3dc
   MSPullToRefreshController: 7461120800f2d8e6feb9cee80f0677e07f322d1c
+  Parse: 28c0dc54f30201a369d29a2f76c09fa43b2add16
   pop: e518794da38942c05255eb64b36d894e70cb4f00
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
   SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50
