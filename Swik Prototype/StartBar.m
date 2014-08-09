@@ -15,7 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.0 alpha:1.0];
+        //self.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.0 alpha:1.0];
         self.items = @[ //flex
                        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil],
                         //test 0
@@ -68,6 +68,7 @@
 -(void)testSettings
 {
     NSLog(@"test settings button");
+    UIPopoverController * popover = [[UIPopoverController alloc] initWithContentViewController:<#(UIViewController *)#>]
 }
 
 /*

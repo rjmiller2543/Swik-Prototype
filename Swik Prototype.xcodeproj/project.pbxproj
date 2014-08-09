@@ -12,6 +12,7 @@
 		500D67931992FCE800940549 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D67921992FCE800940549 /* star.png */; };
 		500D67951992FD0B00940549 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D67941992FD0B00940549 /* settings.png */; };
 		500D67971992FD1300940549 /* dry.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D67961992FD1300940549 /* dry.png */; };
+		503E962019932B5E006CE085 /* SettingsPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503E961F19932B5E006CE085 /* SettingsPopoverController.m */; };
 		506F54921985DCA500D98368 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54911985DCA500D98368 /* Foundation.framework */; };
 		506F54941985DCA500D98368 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54931985DCA500D98368 /* CoreGraphics.framework */; };
 		506F54961985DCA500D98368 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54951985DCA500D98368 /* UIKit.framework */; };
@@ -55,6 +56,8 @@
 		500D67921992FCE800940549 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		500D67941992FD0B00940549 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		500D67961992FD1300940549 /* dry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dry.png; sourceTree = "<group>"; };
+		503E961E19932B5E006CE085 /* SettingsPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsPopoverController.h; sourceTree = "<group>"; };
+		503E961F19932B5E006CE085 /* SettingsPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsPopoverController.m; sourceTree = "<group>"; };
 		506F548E1985DCA500D98368 /* Swik Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swik Prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		506F54911985DCA500D98368 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		506F54931985DCA500D98368 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -229,6 +232,8 @@
 				506F54A71985DCA500D98368 /* ViewController.m */,
 				506F54E21986107D00D98368 /* StartScreenViewController.h */,
 				506F54E31986107D00D98368 /* StartScreenViewController.m */,
+				503E961E19932B5E006CE085 /* SettingsPopoverController.h */,
+				503E961F19932B5E006CE085 /* SettingsPopoverController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				503E962019932B5E006CE085 /* SettingsPopoverController.m in Sources */,
 				506F54E0198603F900D98368 /* StartBar.m in Sources */,
 				506F54A81985DCA500D98368 /* ViewController.m in Sources */,
 				506F54A21985DCA500D98368 /* AppDelegate.m in Sources */,
