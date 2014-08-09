@@ -11,6 +11,7 @@
 #import "StartBar.h"
 #import "ViewController.h"
 #import "StartScreenViewController.h"
+#import "FilterBarController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

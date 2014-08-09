@@ -30,6 +30,10 @@
     //startBar.backgroundColor = [UIColor blackColor];
     [self.window addSubview:startBar];
     
+    FilterBarController *filterBar = [[FilterBarController alloc] init];
+    filterBar.view.backgroundColor = [UIColor grayColor];
+    [self.window addSubview:filterBar.view];
+    
     return YES;
 }
 							
