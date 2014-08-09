@@ -13,6 +13,8 @@
 		500D67951992FD0B00940549 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D67941992FD0B00940549 /* settings.png */; };
 		500D67971992FD1300940549 /* dry.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D67961992FD1300940549 /* dry.png */; };
 		500D679C1993CED500940549 /* FilterBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D679B1993CED500940549 /* FilterBarController.m */; };
+		500D679F1996609A00940549 /* PopoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D679E1996609A00940549 /* PopoverTableViewController.m */; };
+		500D67A219966C8B00940549 /* PopoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D67A119966C8B00940549 /* PopoverTableViewCell.m */; };
 		506F54921985DCA500D98368 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54911985DCA500D98368 /* Foundation.framework */; };
 		506F54941985DCA500D98368 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54931985DCA500D98368 /* CoreGraphics.framework */; };
 		506F54961985DCA500D98368 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54951985DCA500D98368 /* UIKit.framework */; };
@@ -58,6 +60,10 @@
 		500D67961992FD1300940549 /* dry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dry.png; sourceTree = "<group>"; };
 		500D679A1993CED500940549 /* FilterBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterBarController.h; sourceTree = "<group>"; };
 		500D679B1993CED500940549 /* FilterBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterBarController.m; sourceTree = "<group>"; };
+		500D679D1996609A00940549 /* PopoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverTableViewController.h; sourceTree = "<group>"; };
+		500D679E1996609A00940549 /* PopoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverTableViewController.m; sourceTree = "<group>"; };
+		500D67A019966C8B00940549 /* PopoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverTableViewCell.h; sourceTree = "<group>"; };
+		500D67A119966C8B00940549 /* PopoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverTableViewCell.m; sourceTree = "<group>"; };
 		506F548E1985DCA500D98368 /* Swik Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swik Prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		506F54911985DCA500D98368 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		506F54931985DCA500D98368 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -232,6 +238,8 @@
 				506F54A71985DCA500D98368 /* ViewController.m */,
 				506F54E21986107D00D98368 /* StartScreenViewController.h */,
 				506F54E31986107D00D98368 /* StartScreenViewController.m */,
+				500D679D1996609A00940549 /* PopoverTableViewController.h */,
+				500D679E1996609A00940549 /* PopoverTableViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -258,6 +266,8 @@
 				506F54DF198603F900D98368 /* StartBar.m */,
 				500D679A1993CED500940549 /* FilterBarController.h */,
 				500D679B1993CED500940549 /* FilterBarController.m */,
+				500D67A019966C8B00940549 /* PopoverTableViewCell.h */,
+				500D67A119966C8B00940549 /* PopoverTableViewCell.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -403,8 +413,10 @@
 				506F54A81985DCA500D98368 /* ViewController.m in Sources */,
 				506F54A21985DCA500D98368 /* AppDelegate.m in Sources */,
 				500D679C1993CED500940549 /* FilterBarController.m in Sources */,
+				500D679F1996609A00940549 /* PopoverTableViewController.m in Sources */,
 				506F549E1985DCA500D98368 /* main.m in Sources */,
 				506F54E41986107D00D98368 /* StartScreenViewController.m in Sources */,
+				500D67A219966C8B00940549 /* PopoverTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

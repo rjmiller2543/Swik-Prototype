@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PopoverTableViewController.h"
+#import "WYPopoverController.h"
 
-@interface StartBar : UIToolbar
+@interface StartBar : UIToolbar <WYPopoverControllerDelegate>
+
+@property (nonatomic, retain) UIBarButtonItem *settingButton;
+@property (nonatomic, retain) WYPopoverController *popoverController;
 
 @end

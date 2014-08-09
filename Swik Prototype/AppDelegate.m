@@ -22,17 +22,17 @@
     [self.window setRootViewController:viewController];
     [self.window addSubview:viewController.view];
     
-    StartBar *startBar = [[StartBar alloc] initWithFrame:CGRectMake(0, 0, 350, 62)];
+    _startBar = [[StartBar alloc] initWithFrame:CGRectMake(0, 0, 350, 62)];
     //startBar.translucent = NO;
-    startBar.barStyle = UIBarStyleBlackOpaque;
-    startBar.barTintColor = [UIColor redColor];
+    _startBar.barStyle = UIBarStyleBlackOpaque;
+    _startBar.barTintColor = [UIColor redColor];
     //startBar.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0];
     //startBar.backgroundColor = [UIColor blackColor];
-    [self.window addSubview:startBar];
+    [self.window addSubview:_startBar];
     
-    FilterBarController *filterBar = [[FilterBarController alloc] init];
-    filterBar.view.backgroundColor = [UIColor grayColor];
-    [self.window addSubview:filterBar.view];
+    _filterBar = [[FilterBarController alloc] init];
+    _filterBar.view.backgroundColor = [UIColor grayColor];
+    [self.window addSubview:_filterBar.view];
     
     return YES;
 }

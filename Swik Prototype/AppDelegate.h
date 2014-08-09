@@ -16,5 +16,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, retain) StartBar *startBar;
+@property (nonatomic, retain) FilterBarController *filterBar;
 
 @end

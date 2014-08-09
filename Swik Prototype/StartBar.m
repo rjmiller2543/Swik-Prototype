@@ -16,6 +16,7 @@
     if (self) {
         // Initialization code
         //self.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.0 alpha:1.0];
+        _settingButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settings.png"] landscapeImagePhone:nil style:UIBarButtonItemStylePlain target:self action:@selector(testSettings)];
         self.items = @[ //flex
                        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil],
                         //test 0
@@ -35,7 +36,8 @@
                         //flex
                        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil],
                         //test settings
-                       [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settings.png"] landscapeImagePhone:nil style:UIBarButtonItemStylePlain target:self action:@selector(testSettings)],
+                       //[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settings.png"] landscapeImagePhone:nil style:UIBarButtonItemStylePlain target:self action:@selector(testSettings)],
+                       _settingButton,
                        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil],
                        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil]
                        ];
@@ -68,7 +70,22 @@
 -(void)testSettings
 {
     NSLog(@"test settings button");
-    UIPopoverController * popover = [[UIPopoverController alloc] initWithContentViewController:<#(UIViewController *)#>]
+    PopoverTableViewController *popoverViewController = [[PopoverTableViewController alloc] init];
+    _popoverController = [[WYPopoverController alloc] initWithContentViewController:popoverViewController];
+    _popoverController.delegate = self;
+    [_popoverController setPopoverContentSize:CGSizeMake(90, 168)];
+    [_popoverController presentPopoverFromBarButtonItem:_settingButton permittedArrowDirections:WYPopoverArrowDirectionUnknown animated:YES];
+}
+
+- (BOOL)popoverControllerShouldDismissPopover:(WYPopoverController *)controller
+{
+    return YES;
+}
+
+- (void)popoverControllerDidDismissPopover:(WYPopoverController *)controller
+{
+    _popoverController.delegate = nil;
+    _popoverController = nil;
 }
 
 /*
