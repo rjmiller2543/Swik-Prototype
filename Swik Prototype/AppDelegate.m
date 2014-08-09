@@ -22,7 +22,7 @@
     [self.window setRootViewController:viewController];
     [self.window addSubview:viewController.view];
     
-    StartBar *startBar = [[StartBar alloc] initWithFrame:CGRectMake(0, 0, 350, 60)];
+    StartBar *startBar = [[StartBar alloc] initWithFrame:CGRectMake(0, 0, 350, 62)];
     //startBar.translucent = NO;
     startBar.barStyle = UIBarStyleBlackOpaque;
     startBar.barTintColor = [UIColor redColor];
