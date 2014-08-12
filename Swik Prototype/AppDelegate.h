@@ -19,4 +19,8 @@
 @property (nonatomic, retain) StartBar *startBar;
 @property (nonatomic, retain) FilterBarController *filterBar;
 
+//For now to be used a test array of objects that will be placed into the cells of the start page
+//Later on may be used as the app delegate object array filled with objects from JSON or Parse fetch?
+@property (nonatomic, retain) NSMutableArray *objectsArray;
+
 @end

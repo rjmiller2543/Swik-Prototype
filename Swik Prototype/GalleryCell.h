@@ -1,5 +1,5 @@
 //
-//  StartScreenViewController.h
+//  GalleryCell.h
 //  Swik Prototype
 //
 //  Created by Robert Miller on 8/10/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StartScreenViewController : UICollectionViewController
+@interface GalleryCell : UICollectionViewCell
 
 @end
