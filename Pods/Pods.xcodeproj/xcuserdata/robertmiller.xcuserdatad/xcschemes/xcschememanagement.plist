@@ -39,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,7 +77,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>0B1A34F513C64CBAACAC3645</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>35A44188F5E442F7A8D861C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3DD4DC935701416EB2313672</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4B47E39AF73D4C508E107190</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4BAB702008874A78ADD282DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +112,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>5A3175C38DCE4A46BFAADC05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>60744257D44E4D5DB71EDC68</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7117CDF4E9E447B2AE5F7B24</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7774E082883B41A380F50863</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,12 +157,42 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9D164CCEDEBB4096833D6CF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BB562015DB8F41DC8E3B35E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BC7EF022BEE04DA684696D2D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C58D5932B91B4372A86C7F96</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFBFE075A18644CFAC056837</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D0CE8C594AB44FBEAFF7AB70</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D711ADDDF4FD401F85DC2F0D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FAB0652C3FCC4C9784FFE9CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
