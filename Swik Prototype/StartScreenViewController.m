@@ -71,6 +71,30 @@ static NSString * const gallerIdentifier = @"GalleryCell";
     return 5;
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGSize returnSize = CGSizeMake(60, 60);
+    if (indexPath.row == 0) {
+        returnSize = CGSizeMake(40, 320);
+    }
+    else if (indexPath.row == 1) {
+        returnSize = CGSizeMake(120, 120);
+    }
+    else if (indexPath.row == 2) {
+        returnSize = CGSizeMake(280, 280);
+    }
+    else if (indexPath.row == 3) {
+        returnSize = CGSizeMake(318, 40);
+    }
+    else if (indexPath.row == 4) {
+        returnSize = CGSizeMake(280, 280);
+    }
+    else {
+        returnSize = CGSizeMake(60, 60);
+    }
+    return returnSize;
+}
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor blueColor];
@@ -88,7 +112,7 @@ static NSString * const gallerIdentifier = @"GalleryCell";
     }
     else if (indexPath.row == 2) {
         cell = (ProximityCell *)[collectionView dequeueReusableCellWithReuseIdentifier:proximityIdentifier forIndexPath:indexPath];
-        cell.frame = CGRectMake(0, 0, 320, 40);
+        //[cell setFrame:CGRectMake(0, 0, 320, 40)];
         //cell.backgroundColor = [UIColor greenColor];
     }
     else if (indexPath.row == 3) {

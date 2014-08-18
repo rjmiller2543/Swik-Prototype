@@ -14,7 +14,9 @@
     self = [super initWithFrame:frameRect];
     if (self) {
         // Initialization code
-        [self setFrame:CGRectMake(0, 0, 318, 320)];
+        //UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 280, 40)];
+        //imageView.image = [UIImage imageNamed:@"280x40.png"];
+        //[self.contentView addSubview:imageView];
         self.backgroundColor = [UIColor redColor];
     }
     return self;

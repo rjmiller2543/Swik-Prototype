@@ -14,15 +14,20 @@
 {
     // Override point for customization after application launch.
     UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
-    [aFlowLayout setItemSize:CGSizeMake(60, 60)];
-    [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-    //myCollectionViewController = [[MyCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
+    //[aFlowLayout setItemSize:CGSizeMake(60, 60)];
+    [aFlowLayout setMinimumLineSpacing:4];
+    [aFlowLayout setMinimumInteritemSpacing:4];
+    [aFlowLayout setHeaderReferenceSize:CGSizeMake(320, 90)];
+    [aFlowLayout setFooterReferenceSize:CGSizeMake(320, 30)];
+    UIEdgeInsets edgeInset = UIEdgeInsetsMake(10, 10, 10, 10);
+    [aFlowLayout setSectionInset:edgeInset];
+    [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     //StartScreenViewController *viewController = [[StartScreenViewController alloc] init];
     StartScreenViewController *viewController = [[StartScreenViewController alloc] initWithCollectionViewLayout:aFlowLayout];
     viewController.edgesForExtendedLayout = UIRectEdgeAll;
     viewController.extendedLayoutIncludesOpaqueBars = NO;
-    [viewController.view setBounds:CGRectMake(0, STARTBAR_HEIGHT, self.window.screen.bounds.size.width, self.window.screen.bounds.size.height - STARTBAR_HEIGHT)];
-    //viewController.view.frame = viewController.view.bounds;
+    //[viewController.view setBounds:CGRectMake(0, STARTBAR_HEIGHT + 40, self.window.screen.bounds.size.width, self.window.screen.bounds.size.height - STARTBAR_HEIGHT)];
+    //viewController.view.frame = CGRectMake(0, 160, 320, self.window.screen.bounds.size.height - 130);
     viewController.view.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:1.0 alpha:1.0];
     viewController.collectionView.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:1.0 alpha:1.0];
     [self.window setRootViewController:viewController];
@@ -39,6 +44,8 @@
     _filterBar = [[FilterBarController alloc] init];
     _filterBar.view.backgroundColor = [UIColor grayColor];
     [self.window addSubview:_filterBar.view];
+    UIImage *testImage = [UIImage imageNamed:@"280x40.png"];
+    NSLog(@"dimensions are: %f x %f", testImage.size.height, testImage.size.width);
     
     return YES;
 }
