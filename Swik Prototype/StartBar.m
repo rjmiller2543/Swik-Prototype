@@ -16,6 +16,16 @@
     if (self) {
         // Initialization code
         //self.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.0 alpha:1.0];
+        _swipeRightForSearchBar = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(ShowSearchBar)];
+        [_swipeRightForSearchBar setEnabled:YES];
+        _swipeRightForSearchBar.direction = UISwipeGestureRecognizerDirectionRight;
+        [self addGestureRecognizer:_swipeRightForSearchBar];
+        
+        _swipeLeftForSearchBar = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(RemoveSearchBar)];
+        [_swipeLeftForSearchBar setEnabled:NO];
+        _swipeLeftForSearchBar.direction = UISwipeGestureRecognizerDirectionLeft;
+        [self addGestureRecognizer:_swipeLeftForSearchBar];
+        
         _settingButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settings.png"] landscapeImagePhone:nil style:UIBarButtonItemStylePlain target:self action:@selector(testSettings)];
         self.items = @[ //flex
                        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil],
@@ -86,6 +96,50 @@
 {
     _popoverController.delegate = nil;
     _popoverController = nil;
+}
+
+-(void)ShowSearchBar
+{
+    NSLog(@"Show Search Bar");
+    [_swipeLeftForSearchBar setEnabled:YES];
+    [_swipeRightForSearchBar setEnabled:NO];
+    
+    _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(10, 12, 0, 46)];
+    [self addSubview:_searchBar];
+    CGRect movedSearchBar = CGRectMake(10, 12, 240, 46);
+    [UIView animateWithDuration:0.5
+                          delay:0.0
+                        options: UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         // do whatever animation you want, e.g.,
+                         NSLog(@"moving");
+                         _searchBar.frame = movedSearchBar;
+                     }
+                     completion:^(BOOL finished){
+                         if(!finished)
+                             return;
+                     }];
+}
+
+-(void)RemoveSearchBar
+{
+    NSLog(@"Remove SearchBar");
+    [_swipeRightForSearchBar setEnabled:YES];
+    [_swipeLeftForSearchBar setEnabled:NO];
+    
+    CGRect movedSearchBar = CGRectMake(10, 12, 0, 46);
+    [UIView animateWithDuration:0.5
+                          delay:0.0
+                        options: UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         // do whatever animation you want, e.g.,
+                         NSLog(@"moving");
+                         _searchBar.frame = movedSearchBar;
+                     }
+                     completion:^(BOOL finished){
+                         if(finished)
+                             [_searchBar removeFromSuperview];
+                     }];
 }
 
 /*

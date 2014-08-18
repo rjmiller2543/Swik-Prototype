@@ -10,9 +10,12 @@
 #import "PopoverTableViewController.h"
 #import "WYPopoverController.h"
 
-@interface StartBar : UIToolbar <WYPopoverControllerDelegate>
+@interface StartBar : UIToolbar <WYPopoverControllerDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, retain) UIBarButtonItem *settingButton;
 @property (nonatomic, retain) WYPopoverController *popoverController;
+@property (nonatomic, retain) UISwipeGestureRecognizer *swipeRightForSearchBar;
+@property (nonatomic, retain) UISwipeGestureRecognizer *swipeLeftForSearchBar;
+@property (nonatomic, retain) UISearchBar *searchBar;
 
 @end

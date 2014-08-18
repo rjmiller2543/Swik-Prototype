@@ -14,14 +14,10 @@
 {
     // Override point for customization after application launch.
     UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
-    //[aFlowLayout setItemSize:CGSizeMake(60, 60)];
-    [aFlowLayout setMinimumLineSpacing:4];
-    [aFlowLayout setMinimumInteritemSpacing:4];
-    [aFlowLayout setHeaderReferenceSize:CGSizeMake(320, 90)];
-    [aFlowLayout setFooterReferenceSize:CGSizeMake(320, 30)];
-    UIEdgeInsets edgeInset = UIEdgeInsetsMake(10, 10, 10, 10);
-    [aFlowLayout setSectionInset:edgeInset];
+    [aFlowLayout setItemSize:CGSizeMake(60, 60)];
     [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    [aFlowLayout setHeaderReferenceSize:CGSizeMake(320, 90)];
+    //myCollectionViewController = [[MyCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
     //StartScreenViewController *viewController = [[StartScreenViewController alloc] init];
     StartScreenViewController *viewController = [[StartScreenViewController alloc] initWithCollectionViewLayout:aFlowLayout];
     viewController.edgesForExtendedLayout = UIRectEdgeAll;
