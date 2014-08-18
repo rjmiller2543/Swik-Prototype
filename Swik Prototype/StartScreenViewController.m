@@ -40,6 +40,7 @@ static NSString * const gallerIdentifier = @"GalleryCell";
     [self.collectionView registerClass:[FriendSuggestionCell class] forCellWithReuseIdentifier:friendSuggestionIdentifier];
     [self.collectionView registerClass:[GalleryCell class] forCellWithReuseIdentifier:gallerIdentifier];
     
+    _imageArray = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"random-facts-you-didnt-know-45.png"], [UIImage imageNamed:@"life_is_random.png"], nil];
     // Do any additional setup after loading the view.
 }
 
@@ -68,7 +69,16 @@ static NSString * const gallerIdentifier = @"GalleryCell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 //#warning Incomplete method implementation -- Return the number of items in the section
-    return 5;
+    //return 5;
+    return 2;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIImage *image = [_imageArray objectAtIndex:indexPath.row];
+    //You may want to create a divider to scale the size by the way..
+    float divider = 2;
+    return CGSizeMake(image.size.width / divider, image.size.height / divider);
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -79,11 +89,19 @@ static NSString * const gallerIdentifier = @"GalleryCell";
     if (indexPath.row == 0) {
         NSLog(@"indexpath.row = 0");
         cell = (MessageCell *)[collectionView dequeueReusableCellWithReuseIdentifier:messageIdentifier forIndexPath:indexPath];
+        UIImage *image = [_imageArray objectAtIndex:indexPath.row];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width/2, image.size.height/2)];
+        imageView.image = image;
+        [cell addSubview:imageView];
         //cell.frame = CGRectMake(0, 0, 320, 40);
         //cell.backgroundColor = [UIColor blueColor];
     }
     else if (indexPath.row == 1) {
         cell = (AttachmentCell *)[collectionView dequeueReusableCellWithReuseIdentifier:attachmentIdentifier forIndexPath:indexPath];
+        UIImage *image = [_imageArray objectAtIndex:indexPath.row];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width/2, image.size.height/2)];
+        imageView.image = image;
+        [cell addSubview:imageView];
         //cell.backgroundColor = [UIColor redColor];
     }
     else if (indexPath.row == 2) {
@@ -103,7 +121,7 @@ static NSString * const gallerIdentifier = @"GalleryCell";
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
         //cell.backgroundColor = [UIColor blackColor];
     }
-   
+  
     return cell;
 }
 

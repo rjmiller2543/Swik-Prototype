@@ -15,7 +15,8 @@
     // Override point for customization after application launch.
     UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
     [aFlowLayout setItemSize:CGSizeMake(60, 60)];
-    [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    [aFlowLayout setHeaderReferenceSize:CGSizeMake(320, 90)];
     //myCollectionViewController = [[MyCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
     //StartScreenViewController *viewController = [[StartScreenViewController alloc] init];
     StartScreenViewController *viewController = [[StartScreenViewController alloc] initWithCollectionViewLayout:aFlowLayout];

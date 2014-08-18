@@ -10,4 +10,6 @@
 
 @interface FilterBarController : UIViewController
 
+@property (nonatomic, retain) UIScrollView *filterOptionsView;
+
 @end

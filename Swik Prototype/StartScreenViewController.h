@@ -10,4 +10,6 @@
 
 @interface StartScreenViewController : UICollectionViewController
 
+@property (nonatomic, retain) NSArray *imageArray;
+
 @end

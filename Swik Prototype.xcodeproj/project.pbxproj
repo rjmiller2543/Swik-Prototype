@@ -22,6 +22,8 @@
 		500D67B419980D9500940549 /* GalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D67B319980D9500940549 /* GalleryCell.m */; };
 		500D67B71998112000940549 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D67B61998112000940549 /* CollectionViewController.m */; };
 		500D67BA199817FE00940549 /* StartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D67B9199817FE00940549 /* StartScreenViewController.m */; };
+		500D67BC199CFFEF00940549 /* life_is_random.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D67BB199CFFEF00940549 /* life_is_random.png */; };
+		500D67BE199D002800940549 /* random-facts-you-didnt-know-45.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D67BD199D002800940549 /* random-facts-you-didnt-know-45.png */; };
 		506F54921985DCA500D98368 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54911985DCA500D98368 /* Foundation.framework */; };
 		506F54941985DCA500D98368 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54931985DCA500D98368 /* CoreGraphics.framework */; };
 		506F54961985DCA500D98368 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54951985DCA500D98368 /* UIKit.framework */; };
@@ -84,6 +86,8 @@
 		500D67B61998112000940549 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		500D67B8199817FE00940549 /* StartScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScreenViewController.h; sourceTree = "<group>"; };
 		500D67B9199817FE00940549 /* StartScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScreenViewController.m; sourceTree = "<group>"; };
+		500D67BB199CFFEF00940549 /* life_is_random.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = life_is_random.png; sourceTree = "<group>"; };
+		500D67BD199D002800940549 /* random-facts-you-didnt-know-45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "random-facts-you-didnt-know-45.png"; sourceTree = "<group>"; };
 		506F548E1985DCA500D98368 /* Swik Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swik Prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		506F54911985DCA500D98368 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		506F54931985DCA500D98368 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -223,6 +227,8 @@
 		506F54981985DCA500D98368 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				500D67BD199D002800940549 /* random-facts-you-didnt-know-45.png */,
+				500D67BB199CFFEF00940549 /* life_is_random.png */,
 				506F54991985DCA500D98368 /* Swik Prototype-Info.plist */,
 				506F549A1985DCA500D98368 /* InfoPlist.strings */,
 				506F549D1985DCA500D98368 /* main.m */,
@@ -386,7 +392,9 @@
 				500D67911992FCD800940549 /* puzzle.png in Resources */,
 				506F54AA1985DCA500D98368 /* Images.xcassets in Resources */,
 				500D67951992FD0B00940549 /* settings.png in Resources */,
+				500D67BC199CFFEF00940549 /* life_is_random.png in Resources */,
 				506F549C1985DCA500D98368 /* InfoPlist.strings in Resources */,
+				500D67BE199D002800940549 /* random-facts-you-didnt-know-45.png in Resources */,
 				506F54A51985DCA500D98368 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
