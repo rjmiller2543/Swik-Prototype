@@ -13,13 +13,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
-    [aFlowLayout setItemSize:CGSizeMake(60, 60)];
-    [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    //Create temp array of objects (will eventually be some fetched objects
+    _objectsArray = [[NSMutableArray alloc] initWithObjects:[[MessageCell alloc] init], [[FriendSuggestionCell alloc] init], [[FriendSuggestionCell alloc] init], [[ProximityCell alloc] init], [[FriendSuggestionCell alloc] init], [[AttachmentCell alloc] init], [[FriendSuggestionCell alloc] init], [[GalleryCell alloc] init], nil];
+    
+    //Create The Custom layout
+ /*   UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
+    //[aFlowLayout setItemSize:CGSizeMake(60, 60)];
+    [aFlowLayout setMinimumLineSpacing:2];
+    [aFlowLayout setMinimumInteritemSpacing:2];
     [aFlowLayout setHeaderReferenceSize:CGSizeMake(320, 90)];
-    //myCollectionViewController = [[MyCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
-    //StartScreenViewController *viewController = [[StartScreenViewController alloc] init];
-    StartScreenViewController *viewController = [[StartScreenViewController alloc] initWithCollectionViewLayout:aFlowLayout];
+    [aFlowLayout setFooterReferenceSize:CGSizeMake(320, 30)];
+    UIEdgeInsets edgeInset = UIEdgeInsetsMake(2, 2, 2, 2);
+    [aFlowLayout setSectionInset:edgeInset];
+    [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+   */
+    StartScreenLayout *layout = [[StartScreenLayout alloc] init];
+    
+    //Add Layout
+    //StartScreenViewController *viewController = [[StartScreenViewController alloc] initWithCollectionViewLayout:aFlowLayout];
+    StartScreenViewController *viewController = [[StartScreenViewController alloc] initWithCollectionViewLayout:layout];
     viewController.edgesForExtendedLayout = UIRectEdgeAll;
     viewController.extendedLayoutIncludesOpaqueBars = NO;
     //[viewController.view setBounds:CGRectMake(0, STARTBAR_HEIGHT + 40, self.window.screen.bounds.size.width, self.window.screen.bounds.size.height - STARTBAR_HEIGHT)];
@@ -29,6 +41,7 @@
     [self.window setRootViewController:viewController];
     [self.window addSubview:viewController.view];
     
+    //Create and add the start bar
     _startBar = [[StartBar alloc] initWithFrame:CGRectMake(0, 0, 350, 62)];
     //startBar.translucent = NO;
     _startBar.barStyle = UIBarStyleBlackOpaque;
@@ -37,13 +50,17 @@
     //startBar.backgroundColor = [UIColor blackColor];
     [self.window addSubview:_startBar];
     
+    //Create and add the filter bar
     _filterBar = [[FilterBarController alloc] init];
     _filterBar.view.backgroundColor = [UIColor grayColor];
     [self.window addSubview:_filterBar.view];
-    UIImage *testImage = [UIImage imageNamed:@"280x40.png"];
-    NSLog(@"dimensions are: %f x %f", testImage.size.height, testImage.size.width);
     
     return YES;
+}
+
++(id)sharedInstance
+{
+    return [[UIApplication sharedApplication] delegate];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

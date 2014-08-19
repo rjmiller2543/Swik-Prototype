@@ -48,6 +48,7 @@
 		506F54D71985E04700D98368 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54D61985E04700D98368 /* AudioToolbox.framework */; };
 		506F54E0198603F900D98368 /* StartBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 506F54DF198603F900D98368 /* StartBar.m */; };
 		50F54E3F199AD72300B6A47B /* 280x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F54E3E199AD72300B6A47B /* 280x40.png */; };
+		50F54E4519A2F26500B6A47B /* StartScreenLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F54E4419A2F26500B6A47B /* StartScreenLayout.m */; };
 		DE4B37A979F746779553FFD0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ACD738E7DF4E9DA9F2605B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +121,8 @@
 		506F54DF198603F900D98368 /* StartBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartBar.m; sourceTree = "<group>"; };
 		506F54E11986093E00D98368 /* SwikDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwikDefinitions.h; sourceTree = "<group>"; };
 		50F54E3E199AD72300B6A47B /* 280x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 280x40.png; sourceTree = "<group>"; };
+		50F54E4319A2F26500B6A47B /* StartScreenLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScreenLayout.h; sourceTree = "<group>"; };
+		50F54E4419A2F26500B6A47B /* StartScreenLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScreenLayout.m; sourceTree = "<group>"; };
 		6CC2B624F0A44A0B9758E611 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D9ACD738E7DF4E9DA9F2605B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -307,6 +310,8 @@
 				500D67B019980BA400940549 /* FriendSuggestionCell.m */,
 				500D67B219980D9500940549 /* GalleryCell.h */,
 				500D67B319980D9500940549 /* GalleryCell.m */,
+				50F54E4319A2F26500B6A47B /* StartScreenLayout.h */,
+				50F54E4419A2F26500B6A47B /* StartScreenLayout.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 				500D67AB19980B8100940549 /* AttachmentCell.m in Sources */,
 				500D679C1993CED500940549 /* FilterBarController.m in Sources */,
 				500D67A819980B7100940549 /* MessageCell.m in Sources */,
+				50F54E4519A2F26500B6A47B /* StartScreenLayout.m in Sources */,
 				500D67B119980BA400940549 /* FriendSuggestionCell.m in Sources */,
 				500D679F1996609A00940549 /* PopoverTableViewController.m in Sources */,
 				500D67B71998112000940549 /* CollectionViewController.m in Sources */,

@@ -12,6 +12,7 @@
 #import "ProximityCell.h"
 #import "FriendSuggestionCell.h"
 #import "GalleryCell.h"
+#import "AppDelegate.h"
 
 @interface StartScreenViewController ()
 
@@ -31,6 +32,8 @@ static NSString * const gallerIdentifier = @"GalleryCell";
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
+    float height = [[[[AppDelegate sharedInstance] window] screen] bounds].size.height;
+    [self.collectionView setFrame:CGRectMake(0, 90, 320, height - 90)];
     
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
@@ -40,7 +43,6 @@ static NSString * const gallerIdentifier = @"GalleryCell";
     [self.collectionView registerClass:[FriendSuggestionCell class] forCellWithReuseIdentifier:friendSuggestionIdentifier];
     [self.collectionView registerClass:[GalleryCell class] forCellWithReuseIdentifier:gallerIdentifier];
     
-    _imageArray = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"random-facts-you-didnt-know-45.png"], [UIImage imageNamed:@"life_is_random.png"], nil];
     // Do any additional setup after loading the view.
 }
 
@@ -70,21 +72,30 @@ static NSString * const gallerIdentifier = @"GalleryCell";
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 //#warning Incomplete method implementation -- Return the number of items in the section
     //return 5;
-    return 2;
+    return [[[AppDelegate sharedInstance] objectsArray] count];
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIImage *image = [_imageArray objectAtIndex:indexPath.row];
-    //You may want to create a divider to scale the size by the way..
-    float divider = 2;
-    return CGSizeMake(image.size.width / divider, image.size.height / divider);
+    NSLog(@"-> layout attributes for item at index path");
+    UICollectionViewLayoutAttributes *layoutAttributes = [[UICollectionViewLayoutAttributes alloc] init];
+    if (indexPath.row == 0) {
+        [layoutAttributes setFrame:CGRectMake(2, 92, 80, 165)];
+    }
+    if (indexPath.row == 1) {
+        [layoutAttributes setFrame:CGRectMake(84, 92, 234, 78)];
+    }
+    if (indexPath.row == 2) {
+        [layoutAttributes setFrame:CGRectMake(84, 172, 234, 78)];
+    }
+    
+    return layoutAttributes;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CGSize returnSize = CGSizeMake(60, 60);
-    if (indexPath.row == 0) {
+/*    if (indexPath.row == 0) {
         returnSize = CGSizeMake(40, 320);
     }
     else if (indexPath.row == 1) {
@@ -102,42 +113,52 @@ static NSString * const gallerIdentifier = @"GalleryCell";
     else {
         returnSize = CGSizeMake(60, 60);
     }
+  */
+    NSObject *tempObject = [[[AppDelegate sharedInstance] objectsArray] objectAtIndex:indexPath.row];
+    NSLog(@"tempObject class: %@", [tempObject class]);
+    if ([tempObject class] == [MessageCell class]) {
+        returnSize = CGSizeMake(80, 165);
+    }
+    else if ([tempObject class] == [AttachmentCell class]) {
+        returnSize = CGSizeMake(316, 280);
+    }
+    else if ([tempObject class] == [ProximityCell class]) {
+        returnSize = CGSizeMake(234, 280);
+    }
+    else if ([tempObject class] == [FriendSuggestionCell class]) {
+        returnSize = CGSizeMake(234, 78);
+    }
+    else if ([tempObject class] == [GalleryCell class]) {
+        returnSize = CGSizeMake(80, 80);
+    }
+    else {
+        returnSize = CGSizeMake(60, 60);
+    }
+    
     return returnSize;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor blueColor];
     
     // Configure the cell
-    if (indexPath.row == 0) {
-        NSLog(@"indexpath.row = 0");
+    NSObject *tempObject = [[[AppDelegate sharedInstance] objectsArray] objectAtIndex:indexPath.row];
+    if ([tempObject class] == [MessageCell class]) {
         cell = (MessageCell *)[collectionView dequeueReusableCellWithReuseIdentifier:messageIdentifier forIndexPath:indexPath];
-        UIImage *image = [_imageArray objectAtIndex:indexPath.row];
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width/2, image.size.height/2)];
-        imageView.image = image;
-        [cell addSubview:imageView];
-        //cell.frame = CGRectMake(0, 0, 320, 40);
-        //cell.backgroundColor = [UIColor blueColor];
     }
-    else if (indexPath.row == 1) {
+    else if ([tempObject class] == [AttachmentCell class]) {
         cell = (AttachmentCell *)[collectionView dequeueReusableCellWithReuseIdentifier:attachmentIdentifier forIndexPath:indexPath];
-        UIImage *image = [_imageArray objectAtIndex:indexPath.row];
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width/2, image.size.height/2)];
-        imageView.image = image;
-        [cell addSubview:imageView];
-        //cell.backgroundColor = [UIColor redColor];
     }
-    else if (indexPath.row == 2) {
+    else if ([tempObject class] == [ProximityCell class]) {
         cell = (ProximityCell *)[collectionView dequeueReusableCellWithReuseIdentifier:proximityIdentifier forIndexPath:indexPath];
-        //[cell setFrame:CGRectMake(0, 0, 320, 40)];
-        //cell.backgroundColor = [UIColor greenColor];
     }
-    else if (indexPath.row == 3) {
+    else if ([tempObject class] == [FriendSuggestionCell class]) {
         cell = (FriendSuggestionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:friendSuggestionIdentifier forIndexPath:indexPath];
         //cell.backgroundColor = [UIColor yellowColor];
     }
-    else if (indexPath.row == 4) {
+    else if ([tempObject class] == [GalleryCell class]) {
         cell = (GalleryCell *)[collectionView dequeueReusableCellWithReuseIdentifier:gallerIdentifier forIndexPath:indexPath];
         //cell.backgroundColor = [UIColor magentaColor];
     }
@@ -145,7 +166,7 @@ static NSString * const gallerIdentifier = @"GalleryCell";
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
         //cell.backgroundColor = [UIColor blackColor];
     }
-  
+    //NSLog(@"cell description: %@", [cell description]);
     return cell;
 }
 

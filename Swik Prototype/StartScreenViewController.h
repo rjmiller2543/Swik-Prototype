@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StartScreenViewController : UICollectionViewController
-
-@property (nonatomic, retain) NSArray *imageArray;
+@interface StartScreenViewController : UICollectionViewController <UICollectionViewDelegateFlowLayout>
 
 @end

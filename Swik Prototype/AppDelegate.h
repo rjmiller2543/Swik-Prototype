@@ -12,8 +12,17 @@
 #import "ViewController.h"
 #import "StartScreenViewController.h"
 #import "FilterBarController.h"
+#import "StartScreenLayout.h"
+
+#import "MessageCell.h"
+#import "AttachmentCell.h"
+#import "ProximityCell.h"
+#import "FriendSuggestionCell.h"
+#import "GalleryCell.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+
++(id)sharedInstance;
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, retain) StartBar *startBar;

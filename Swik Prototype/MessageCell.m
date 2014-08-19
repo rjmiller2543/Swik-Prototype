@@ -14,7 +14,6 @@
     self = [super initWithFrame:frameRect];
     if (self) {
         // Initialization code
-        NSLog(@"message cell set frame?");
         //[self setFrame:CGRectMake(0, 0, 40, 320)];
         
         self.backgroundColor = [UIColor blueColor];
