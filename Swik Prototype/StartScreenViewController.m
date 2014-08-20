@@ -142,7 +142,7 @@ static NSString * const gallerIdentifier = @"GalleryCell";
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor blueColor];
-    
+    NSLog(@"-> cell for item at index path");
     // Configure the cell
     NSObject *tempObject = [[[AppDelegate sharedInstance] objectsArray] objectAtIndex:indexPath.row];
     if ([tempObject class] == [MessageCell class]) {

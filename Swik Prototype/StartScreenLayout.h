@@ -16,7 +16,7 @@
 
 @property (weak) StartScreenViewController *controller;
 @property (assign) NSUInteger columnsQuantity;
-@property (nonatomic,retain) NSMutableArray *usedObjectIndexes;
+@property (nonatomic,retain) NSMutableArray *objectArray;
 
 -(float)columnWidthForIndexPath:(NSIndexPath *)indexPath;
 
