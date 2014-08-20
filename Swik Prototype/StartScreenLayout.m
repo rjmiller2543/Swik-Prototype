@@ -58,7 +58,7 @@
     BOOL retVal = NO;
     int totalInsetWidth = 6;
     int totalWidth = [[[[AppDelegate sharedInstance] window] screen] bounds].size.width;
-    //int totalWidth = 320;
+    
     if ((currentWidth + previousWidth + totalInsetWidth) <= totalWidth) {
         NSLog(@"yup");
         retVal = YES;
@@ -85,9 +85,8 @@
     return retVal;
 }
 
--(float)heightForIndexPath:(NSIndexPath *)indexPath {
-    //int halfWidth = width/2;
-    //float retVal = width + (arc4random() % halfWidth);
+-(float)heightForIndexPath:(NSIndexPath *)indexPath
+{
     float retVal = 0;
     
     NSObject *tempObject = [[[AppDelegate sharedInstance] objectsArray] objectAtIndex:indexPath.row];
@@ -158,7 +157,6 @@
 
 -(void)prepareLayout{
     self.columnsQuantity = 2;
-    //  Set all column heights to 0
     NSLog(@"columnsQuantity: %i", self.columnsQuantity);
     bool stackCells;
     bool left;
@@ -176,24 +174,18 @@
     
     //  Get all the items available for the section
     NSUInteger itemsCount = [[self collectionView] numberOfItemsInSection:0];
-    //NSLog(@"itemsCount: %i", [[self collectionView] numberOfItemsInSection:0]);
     _itemsAttributes = [NSMutableArray arrayWithCapacity:itemsCount];
     
-    //NSUInteger itemWidth = 0;
-    //NSUInteger itemHeight = 0;
     NSUInteger xOffset = 0;
     NSUInteger yOffset = 0;
     for (NSUInteger i = 0; i < itemsCount; i++){
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
         //NSLog(@"indexPath: %@", indexPath);
         NSUInteger columnIndex = [self longestColumnIndex];
-        //NSUInteger xOffset = columnIndex * [self columnWidth];
         //  Get x, y, width and height for indexPath
         
         NSUInteger itemWidth = 0;
         NSUInteger itemHeight = 0;
-        //NSUInteger xOffset = columnIndex * [self columnWidthForIndexPath:indexPath] + 2;
-        //yOffset = [[_columns objectAtIndex:columnIndex] integerValue] + 2;
         
         if (left) {
             xOffset = 2;
@@ -209,12 +201,10 @@
                 xOffset = previousWidth + 4;
                 //yOffset remains the same
                 if (currentHeight > previousHeight) {
-                    //yOffset += currentHeight + 2;
                     previousHeight = currentHeight;
                     _columns[columnIndex] = @(yOffset + currentHeight);
                 }
                 else {
-                    //yOffset += previousHeight + 2;
                     //previousHeight remains the same as it is
                     _columns[columnIndex] = @(yOffset + previousHeight);
                 }
@@ -225,43 +215,11 @@
                 previousHeight = [self heightForIndexPath:indexPath];
                 previousWidth = [self columnWidthForIndexPath:indexPath];
                 left = false;
-                //currentHeight = [self heightForIndexPath:indexPath];
-                //if (currentHeight > previousHeight) {
-                //    yOffset += currentHeight + 2;
-                //    previousHeight = currentHeight;
-                //    _columns[columnIndex] = @(yOffset + currentHeight);
-                //}
-                //else {
-                //    yOffset += previousHeight + 2;
-                //    _columns[columnIndex] = @(yOffset + previousHeight);
-               // }
             }
             
         }
         itemWidth = [self columnWidthForIndexPath:indexPath];
         itemHeight = [self heightForIndexPath:indexPath];
-        
-  
- /*       if ([self canUseDoubleColumnOnIndex:columnIndex]) {
-            itemWidth = [self columnWidthForIndexPath:indexPath];
-            itemHeight = [self heightForIndexPath:indexPath];
-            //itemWidth = [self columnWidth] * 2;
-            //itemHeight = [self heightForIndexPath:indexPath withWidth:itemWidth];
-            
-            //  Set column height
-            _columns[columnIndex] = @(yOffset + itemHeight);
-            _columns[columnIndex+1] = @(yOffset + itemHeight);
-            
-        }else{
-            itemWidth = [self columnWidthForIndexPath:indexPath];
-            itemHeight = [self heightForIndexPath:indexPath];
-            //itemWidth = [self columnWidth];
-            //itemHeight = [self heightForIndexPath:indexPath withWidth:itemWidth];
-            
-            //  Set column height
-            _columns[columnIndex] = @(yOffset + previousHeight);
-        }
-       */
         
         /*  Assign all those values to an UICollectionViewLayoutAttributes instance
          *  and save it on an array */
@@ -290,9 +248,7 @@
     NSUInteger columnIndex = [self longestColumnIndex];
     float columnHeight = [_columns[columnIndex] floatValue];
     retVal.height = columnHeight + 24;
-    //retVal.height = 60;
-    //retVal.width = 60;
-    //retVal.height = 1200;
+    
     return retVal;
 }
 
