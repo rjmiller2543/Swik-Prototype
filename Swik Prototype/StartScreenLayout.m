@@ -89,7 +89,8 @@
 {
     float retVal = 0;
     
-    NSObject *tempObject = [[[AppDelegate sharedInstance] objectsArray] objectAtIndex:indexPath.row];
+    //NSObject *tempObject = [[[AppDelegate sharedInstance] objectsArray] objectAtIndex:indexPath.row];
+    NSObject *tempObject = [_objectArray objectAtIndex:indexPath.row];
     //NSLog(@"tempObject class: %@", [tempObject class]);
     if ([tempObject class] == [MessageCell class]) {
         retVal = 165;
@@ -123,8 +124,8 @@
 -(float)columnWidthForIndexPath:(NSIndexPath *)indexPath {
     float retVal = 0;
     
-    NSObject *tempObject = [[[AppDelegate sharedInstance] objectsArray] objectAtIndex:indexPath.row];
-    //NSObject *tempObject = [_objectArray objectAtIndex:indexPath.row];
+    //NSObject *tempObject = [[[AppDelegate sharedInstance] objectsArray] objectAtIndex:indexPath.row];
+    NSObject *tempObject = [_objectArray objectAtIndex:indexPath.row];
     //NSLog(@"tempObject class: %@", [tempObject class]);
     if ([tempObject class] == [MessageCell class]) {
         retVal = 80;
@@ -164,7 +165,7 @@
     int previousWidth = 0;
     int currentHeight = 0;
     int currentWidth = 0;
-    //_objectArray = [[NSMutableArray alloc] initWithArray:[[AppDelegate sharedInstance] objectsArray]];
+    _objectArray = [[NSMutableArray alloc] initWithArray:[[AppDelegate sharedInstance] objectsArray]];
     _columns = [NSMutableArray arrayWithCapacity:self.columnsQuantity];
     for (NSInteger i = 0; i < self.columnsQuantity; i++) {
         [_columns addObject:@(0)];
