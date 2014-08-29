@@ -29,11 +29,12 @@ static NSString * const gallerIdentifier = @"GalleryCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     float height = [[[[AppDelegate sharedInstance] window] screen] bounds].size.height;
     [self.collectionView setFrame:CGRectMake(0, 90, 320, height - 90)];
+    
+    //self.collectionView.dataSource = self;
     
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
@@ -72,9 +73,11 @@ static NSString * const gallerIdentifier = @"GalleryCell";
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 //#warning Incomplete method implementation -- Return the number of items in the section
     //return 5;
+    NSLog(@"collection view number of items: %i", [[[AppDelegate sharedInstance] objectsArray] count]);
     return [[[AppDelegate sharedInstance] objectsArray] count];
 }
 
+#if 0
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"-> layout attributes for item at index path");
@@ -137,14 +140,17 @@ static NSString * const gallerIdentifier = @"GalleryCell";
     
     return returnSize;
 }
+#endif //Comment out the layout stuff
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor blueColor];
-    NSLog(@"-> cell for item at index path");
+    cell.backgroundColor = [UIColor blackColor];
+    NSLog(@"-> cell for item at index path: %i", indexPath.row);
+    NSLog(@"cell y: %f", cell.frame.origin.y);
     // Configure the cell
     NSObject *tempObject = [[[AppDelegate sharedInstance] objectsArray] objectAtIndex:indexPath.row];
+    NSLog(@"collection view object class: %@ at index: %i", [tempObject class], indexPath.row);
     if ([tempObject class] == [MessageCell class]) {
         cell = (MessageCell *)[collectionView dequeueReusableCellWithReuseIdentifier:messageIdentifier forIndexPath:indexPath];
     }

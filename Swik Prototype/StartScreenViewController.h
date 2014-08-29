@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StartScreenViewController : UICollectionViewController <UICollectionViewDelegateFlowLayout>
+@interface StartScreenViewController : UICollectionViewController <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
 @end

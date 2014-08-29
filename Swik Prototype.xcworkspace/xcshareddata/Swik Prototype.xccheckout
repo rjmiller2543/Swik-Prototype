@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B0E2FD33-1ACC-4A1F-85CC-2BA5D3FE2315</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Swik Prototype</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>06E3B969-7247-4309-9328-B201DC6D71B0</key>
+		<string>https://github.com/rjmiller2543/Swik-Prototype.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Swik Prototype.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>06E3B969-7247-4309-9328-B201DC6D71B0</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rjmiller2543/Swik-Prototype.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>06E3B969-7247-4309-9328-B201DC6D71B0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>06E3B969-7247-4309-9328-B201DC6D71B0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Swik Prototype</string>
+		</dict>
+	</array>
+</dict>
+</plist>

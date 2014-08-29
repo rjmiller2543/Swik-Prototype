@@ -14,7 +14,7 @@
     self = [super initWithFrame:frameRect];
     if (self) {
         // Initialization code
-        [self setFrame:CGRectMake(0, 0, 278, 320)];
+        //[self setFrame:CGRectMake(0, 0, 278, 320)];
         self.backgroundColor = [UIColor greenColor];
     }
     return self;

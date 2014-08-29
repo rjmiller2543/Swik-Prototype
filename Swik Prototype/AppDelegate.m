@@ -14,19 +14,9 @@
 {
     // Override point for customization after application launch.
     //Create temp array of objects (will eventually be some fetched objects
-    _objectsArray = [[NSMutableArray alloc] initWithObjects:[[MessageCell alloc] init], [[FriendSuggestionCell alloc] init], [[FriendSuggestionCell alloc] init], [[ProximityCell alloc] init], [[FriendSuggestionCell alloc] init], [[AttachmentCell alloc] init], [[FriendSuggestionCell alloc] init], [[GalleryCell alloc] init], nil];
+    _objectsArray = [[NSMutableArray alloc] initWithObjects:[[MessageCell alloc] init], [[FriendSuggestionCell alloc] init], /*[[FriendSuggestionCell alloc] init], */[[ProximityCell alloc] init], [[FriendSuggestionCell alloc] init], [[AttachmentCell alloc] init], [[FriendSuggestionCell alloc] init], [[MessageCell alloc] init], [[GalleryCell alloc] init], [[FriendSuggestionCell alloc] init], [[GalleryCell alloc] init], [[MessageCell alloc] init], nil];
     
     //Create The Custom layout
- /*   UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
-    //[aFlowLayout setItemSize:CGSizeMake(60, 60)];
-    [aFlowLayout setMinimumLineSpacing:2];
-    [aFlowLayout setMinimumInteritemSpacing:2];
-    [aFlowLayout setHeaderReferenceSize:CGSizeMake(320, 90)];
-    [aFlowLayout setFooterReferenceSize:CGSizeMake(320, 30)];
-    UIEdgeInsets edgeInset = UIEdgeInsetsMake(2, 2, 2, 2);
-    [aFlowLayout setSectionInset:edgeInset];
-    [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-   */
     StartScreenLayout *layout = [[StartScreenLayout alloc] init];
     
     //Add Layout
@@ -61,6 +51,14 @@
 +(id)sharedInstance
 {
     return [[UIApplication sharedApplication] delegate];
+}
+
+-(void)setObjectsArray:(NSMutableArray *)objectsArray {
+    NSLog(@"set the new objects array");
+    _objectsArray = objectsArray;
+    for (NSObject *tempObject in _objectsArray) {
+        NSLog(@"tempObject is: %@", [tempObject class]);
+    }
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
