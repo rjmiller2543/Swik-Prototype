@@ -172,12 +172,14 @@
     self.columnsQuantity = 2;
     //NSLog(@"columnsQuantity: %i", self.columnsQuantity);
     bool stackCells;
+    bool stackLeft;
     bool left;
     int previousHeight = 0;
     int previousWidth = 0;
     int currentHeight = 0;
     int currentWidth = 0;
     int addObjectIndex = 0;
+    int prevHeightOffset = 0;
     NSMutableArray *returnArray = [[NSMutableArray alloc] initWithCapacity:[_objectArray count]];
     _objectArray = [[NSMutableArray alloc] initWithArray:[[AppDelegate sharedInstance] objectsArray]];
     _columns = [NSMutableArray arrayWithCapacity:self.columnsQuantity];
@@ -186,6 +188,7 @@
     }
     left = true;
     stackCells = false;
+    stackLeft = false;
     
     //  Get all the items available for the section
     NSUInteger itemsCount = [[self collectionView] numberOfItemsInSection:0];
@@ -214,7 +217,7 @@
         
         NSUInteger itemWidth = 0;
         NSUInteger itemHeight = 0;
-        //NSLog(@"%d", __LINE__);
+        
         if (left) {
 #ifdef EDGE_TO_EDGE
             xOffset = 0;
@@ -227,20 +230,21 @@
             previousWidth = [self columnWidthForIndexPath:indexPath];
             _columns[columnIndex] = @(yOffset + previousHeight);
             //Remove object from the private object array
-            //[_objectArray removeObjectAtIndex:indexPath.row];
             removeItem = true;
         }
         else if (stackCells) {
             // Pretty much a 0% chance we'll ever be able to stack three cells so let's go ahead back to the left after this
+            stackCells = false;
+            left = true;
             int j = indexPath.row;
             bool breakLoop = true;
             while (breakLoop) {
                 currentWidth = [self columnWidthForIndexPath:indexPath];
-                left = true;
+                
                 if ([self canUseDoubleColumnWithCurrentWidth:currentWidth andPreviousWidth:previousWidth]) {
-                    xOffset = previousWidth + 4;
+                    xOffset = previousWidth + 5;
                     //yOffset remains the same
-                    int prevHeightOffset = currentHeight;
+                    //int prevHeightOffset = currentHeight;
                     currentHeight = [self heightForIndexPath:indexPath];
                     if ((currentHeight + prevHeightOffset) <= previousHeight) {
                         // Keep the previous height bc it should be more or less the same..
@@ -292,8 +296,36 @@
             }
             
         }
+        else if (stackLeft) {
+            /* IF we're stacking left, the only case at this point in time is that we are
+             * stacking two friend stuggestion cells to the left.. So to make this a WHOLE
+             * LOT easier, we're just gonna look for another friend suggestion cell and shove it
+             * to the left and with a yoffset of yoffset + friend suggestion + 4
+             */
+            stackLeft = false;
+            yOffset += previousHeight + 4;
+            xOffset = 0;
+            int j = indexPath.row;
+            bool breakloop = true;
+            while (breakloop) {
+                //Look for another friend suggestion cell.. if we don't find one, fuck it for now..
+                NSObject *tempObject = [_objectArray objectAtIndex:j];
+                if ([tempObject class] == [FriendSuggestionCell class]) {
+                    breakloop = false;
+                    removeItem = true;
+                    indexPath = [NSIndexPath indexPathForRow:j inSection:0];
+                }
+                else {
+                    j++;
+                    if (j > [_objectArray count]) {
+                        //No more friend suggestion cells.. give up!
+                        breakloop = false;
+                    }
+                }
+            }
+        }
         else {
-            if ((previousWidth + 4) >= 320) {
+            if ((previousWidth + 5) >= 320) {
                 yOffset += previousHeight + 4;
 #ifdef EDGE_TO_EDGE
                 xOffset = 0;
@@ -314,16 +346,22 @@
                     currentWidth = [self columnWidthForIndexPath:indexPath];
                     left = true;
                     if ([self canUseDoubleColumnWithCurrentWidth:currentWidth andPreviousWidth:previousWidth]) {
-                        xOffset = previousWidth + 4;
+                        xOffset = previousWidth + 5;
                         //yOffset remains the same
                         currentHeight = [self heightForIndexPath:indexPath];
-                        if (currentHeight >= previousHeight) {
+                        //Check is we need to stack left/right/or not at all
+                        if (currentHeight == previousHeight) {
                             previousHeight = currentHeight;
                             _columns[columnIndex] = @(yOffset + currentHeight);
+                        }
+                        else if (currentHeight > previousHeight) {
+                            stackLeft = true;
+                            left = false;
                         }
                         else {
                             // We don't want to go back to the left right now, but we do however want to stack some cells
                             left = false;
+                            prevHeightOffset = [self heightForIndexPath:indexPath];
                             stackCells = true;
                             // Don't update the column height just yet...
                             //_columns[columnIndex] = @(yOffset + previousHeight);
@@ -362,10 +400,10 @@
             NSLog(@"screen layout object class: %@ at index: %i", [[_objectArray objectAtIndex:indexPath.row] class], i);
             addObjectIndex++;
             //[_objectArray removeObjectAtIndex:indexPath.row];
-            //NSObject *objectMovingUp = [_objectArray objectAtIndex:i];
-            //NSObject *objectMovingDown = [_objectArray objectAtIndex:indexPath.row];
-            //[_objectArray setObject:objectMovingDown atIndexedSubscript:i];
-            //[_objectArray setObject:objectMovingUp atIndexedSubscript:indexPath.row];
+            NSObject *objectMovingUp = [_objectArray objectAtIndex:i];
+            NSObject *objectMovingDown = [_objectArray objectAtIndex:indexPath.row];
+            [_objectArray setObject:objectMovingDown atIndexedSubscript:i];
+            [_objectArray setObject:objectMovingUp atIndexedSubscript:indexPath.row];
             //[[[AppDelegate sharedInstance] objectsArray] setObject:objectMovingDown atIndexedSubscript:i];
             //[[[AppDelegate sharedInstance] objectsArray] setObject:objectMovingUp atIndexedSubscript:indexPath.row];
             
@@ -373,7 +411,8 @@
             
             /*  Assign all those values to an UICollectionViewLayoutAttributes instance
              *  and save it on an array */
-            UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+            NSIndexPath *thisPath = [NSIndexPath indexPathForRow:i inSection:0];
+            UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:thisPath];
             NSLog(@"frame is xoffset: %i yoffset: %i width: %i height: %i", xOffset, yOffset, itemWidth, itemHeight);
             attributes.frame = CGRectMake(xOffset, yOffset, itemWidth, itemHeight);
             [_itemsAttributes addObject:attributes];
@@ -384,7 +423,6 @@
 
 -(NSArray *)layoutAttributesForElementsInRect:(CGRect)rect{
     NSPredicate *filterPredicate = [NSPredicate predicateWithBlock:^BOOL(UICollectionViewLayoutAttributes * evaluatedObject, NSDictionary *bindings) {
-        //NSLog(@"rect x: %f y: %f width: %f height: %f",rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
         BOOL predicateRetVal = CGRectIntersectsRect(rect, [evaluatedObject frame]);
         NSLog(@"-> layoutAttributesForElementsInRect with bool: %i", predicateRetVal);
         return predicateRetVal;
