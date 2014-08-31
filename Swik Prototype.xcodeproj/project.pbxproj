@@ -90,6 +90,7 @@
 		500D67B9199817FE00940549 /* StartScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScreenViewController.m; sourceTree = "<group>"; };
 		500D67BB199CFFEF00940549 /* life_is_random.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = life_is_random.png; sourceTree = "<group>"; };
 		500D67BD199D002800940549 /* random-facts-you-didnt-know-45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "random-facts-you-didnt-know-45.png"; sourceTree = "<group>"; };
+		500D67BF19B2AF9200940549 /* SwikColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwikColors.h; sourceTree = "<group>"; };
 		506F548E1985DCA500D98368 /* Swik Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swik Prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		506F54911985DCA500D98368 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		506F54931985DCA500D98368 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -287,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				506F54E11986093E00D98368 /* SwikDefinitions.h */,
+				500D67BF19B2AF9200940549 /* SwikColors.h */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
