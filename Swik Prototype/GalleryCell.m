@@ -15,7 +15,9 @@
     if (self) {
         // Initialization code
         //[self setFrame:CGRectMake(0, 0, 318, 40)];
-        self.backgroundColor = [UIColor magentaColor];
+        //self.backgroundColor = [UIColor magentaColor];
+        self.backgroundColor = GREEN;
+        /* Add an image for Picture and determine if it's an image or video and add accordingly */
     }
     return self;
 }

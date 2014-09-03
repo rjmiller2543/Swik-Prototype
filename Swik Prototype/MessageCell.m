@@ -15,8 +15,13 @@
     if (self) {
         // Initialization code
         //[self setFrame:CGRectMake(0, 0, 40, 320)];
+        self.backgroundColor = GREEN;
+        //self.backgroundColor = [UIColor blueColor];
+        /* Add an image */
+        _userImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, MESSAGE_CELL_WIDTH, MESSAGE_CELL_WIDTH)];
+        _userImage.backgroundColor = [UIColor blackColor];
+        [self.contentView addSubview:_userImage];
         
-        self.backgroundColor = [UIColor blueColor];
     }
     return self;
 }

@@ -35,14 +35,14 @@
     _startBar = [[StartBar alloc] initWithFrame:CGRectMake(0, 0, 350, 62)];
     //startBar.translucent = NO;
     _startBar.barStyle = UIBarStyleBlackOpaque;
-    _startBar.barTintColor = [UIColor redColor];
+    //_startBar.barTintColor = [UIColor redColor];
     //startBar.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0];
     //startBar.backgroundColor = [UIColor blackColor];
     [self.window addSubview:_startBar];
     
     //Create and add the filter bar
     _filterBar = [[FilterBarController alloc] init];
-    _filterBar.view.backgroundColor = [UIColor grayColor];
+    //_filterBar.view.backgroundColor = [UIColor grayColor];
     [self.window addSubview:_filterBar.view];
     
     return YES;

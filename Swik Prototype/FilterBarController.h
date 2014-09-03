@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SwikDefinitions.h"
 
 @interface FilterBarController : UIViewController
 

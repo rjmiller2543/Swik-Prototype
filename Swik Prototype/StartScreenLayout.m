@@ -97,19 +97,19 @@
     NSObject *tempObject = [_objectArray objectAtIndex:indexPath.row];
     
     if ([tempObject class] == [MessageCell class]) {
-        retVal = 252;
+        retVal = MESSAGE_CELL_HEIGHT;
     }
     else if ([tempObject class] == [AttachmentCell class]) {
-        retVal = 252;
+        retVal = ATTACHMENT_CELL_HEIGHT;
     }
     else if ([tempObject class] == [ProximityCell class]) {
-        retVal = 252;
+        retVal = PROXIMITY_CELL_HEIGHT;
     }
     else if ([tempObject class] == [FriendSuggestionCell class]) {
-        retVal = 123;
+        retVal = FRIEND_SUGGESTION_CELL_HEIGHT;
     }
     else if ([tempObject class] == [GalleryCell class]) {
-        retVal = 123;
+        retVal = GALLERY_CELL_HEIGHT;
     }
     else {
         retVal = 60;
@@ -126,39 +126,19 @@
     NSObject *tempObject = [_objectArray objectAtIndex:indexPath.row];
     
     if ([tempObject class] == [MessageCell class]) {
-#ifdef EDGE_TO_EDGE
-        retVal = 102;
-#elif SET_INSET
-        retVal = 90;//100;
-#endif
+        retVal = MESSAGE_CELL_WIDTH;
     }
     else if ([tempObject class] == [AttachmentCell class]) {
-#ifdef EDGE_TO_EDGE
-        retVal = 320;
-#elif SET_INSET
-        retVal = 316;
-#endif
+        retVal = ATTACMENT_CELL_WIDTH;
     }
     else if ([tempObject class] == [ProximityCell class]) {
-#ifdef EDGE_TO_EDGE
-        retVal = 212;
-#elif SET_INSET
-        retVal = 200;//209;
-#endif
+        retVal = PROXIMITY_CELL_WIDTH;
     }
     else if ([tempObject class] == [FriendSuggestionCell class]) {
-#ifdef EDGE_TO_EDGE
-        retVal = 212;
-#elif SET_INSET
-        retVal = 200;//209;
-#endif
+        retVal = FRIEND_SUGGESTION_CELL_WIDTH;
     }
     else if ([tempObject class] == [GalleryCell class]) {
-#ifdef EDGE_TO_EDGE
-        retVal = 320;
-#elif SET_INSET
-        retVal = 316;
-#endif
+        retVal = GALLERY_CELL_WIDTH;
     }
     else {
         retVal = 60;
@@ -206,8 +186,6 @@
      */
     bool removeItem = false;
     for (NSUInteger i = 0; i < [_objectArray count]; i++){
-    //while ([_objectArray count] != 0) {
-    //while (addObjectIndex < itemsCount) {
         
         //NSLog(@"object array count: %i", [[[AppDelegate sharedInstance] objectsArray] count]);
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
@@ -219,11 +197,7 @@
         NSUInteger itemHeight = 0;
         
         if (left) {
-#ifdef EDGE_TO_EDGE
             xOffset = 0;
-#elif SET_INSET
-            xOffset = 2;
-#endif
             left = false;
             yOffset += previousHeight + 4;
             previousHeight = [self heightForIndexPath:indexPath];
@@ -327,11 +301,7 @@
         else {
             if ((previousWidth + 5) >= 320) {
                 yOffset += previousHeight + 4;
-#ifdef EDGE_TO_EDGE
                 xOffset = 0;
-#elif SET_INSET
-                xOffset = 2;
-#endif
                 previousHeight = [self heightForIndexPath:indexPath];
                 previousWidth = [self columnWidthForIndexPath:indexPath];
                 _columns[columnIndex] = @(yOffset + previousHeight);

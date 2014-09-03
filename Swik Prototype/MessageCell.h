@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SwikDefinitions.h"
 
 @interface MessageCell : UICollectionViewCell
+
+@property (nonatomic, retain) UIImageView *userImage;
 
 @end

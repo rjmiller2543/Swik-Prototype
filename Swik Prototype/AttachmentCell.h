@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SwikDefinitions.h"
 
 @interface AttachmentCell : UICollectionViewCell
+
+@property (nonatomic, retain) UIImageView *attachmentImage;
 
 @end

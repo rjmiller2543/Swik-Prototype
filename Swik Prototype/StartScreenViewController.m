@@ -33,6 +33,7 @@ static NSString * const gallerIdentifier = @"GalleryCell";
     // self.clearsSelectionOnViewWillAppear = NO;
     float height = [[[[AppDelegate sharedInstance] window] screen] bounds].size.height;
     [self.collectionView setFrame:CGRectMake(0, 90, 320, height - 90)];
+    self.view.backgroundColor = GREY;
     
     //self.collectionView.dataSource = self;
     
@@ -162,15 +163,12 @@ static NSString * const gallerIdentifier = @"GalleryCell";
     }
     else if ([tempObject class] == [FriendSuggestionCell class]) {
         cell = (FriendSuggestionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:friendSuggestionIdentifier forIndexPath:indexPath];
-        //cell.backgroundColor = [UIColor yellowColor];
     }
     else if ([tempObject class] == [GalleryCell class]) {
         cell = (GalleryCell *)[collectionView dequeueReusableCellWithReuseIdentifier:gallerIdentifier forIndexPath:indexPath];
-        //cell.backgroundColor = [UIColor magentaColor];
     }
     else {
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-        //cell.backgroundColor = [UIColor blackColor];
     }
     //NSLog(@"cell description: %@", [cell description]);
     return cell;

@@ -16,6 +16,7 @@
     if (self) {
         // Initialization code
         //self.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.0 alpha:1.0];
+        self.backgroundColor = TURUOISE;
         _swipeRightForSearchBar = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(ShowSearchBar)];
         [_swipeRightForSearchBar setEnabled:YES];
         _swipeRightForSearchBar.direction = UISwipeGestureRecognizerDirectionRight;

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "StartScreenViewController.h"
+#import "AppDelegate.h"
 
 @interface StartScreenLayout : UICollectionViewLayout{
     NSMutableArray *_columns;

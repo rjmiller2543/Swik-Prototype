@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PopoverTableViewController.h"
 #import "WYPopoverController.h"
+#import "SwikDefinitions.h"
 
 @interface StartBar : UIToolbar <WYPopoverControllerDelegate, UIGestureRecognizerDelegate>
 

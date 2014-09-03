@@ -15,7 +15,9 @@
     if (self) {
         // Initialization code
         //[self setFrame:CGRectMake(0, 0, 278, 40)];
-        self.backgroundColor = [UIColor yellowColor];
+        //self.backgroundColor = [UIColor yellowColor];
+        self.backgroundColor = GREEN;
+        /* Add an image */
     }
     return self;
 }

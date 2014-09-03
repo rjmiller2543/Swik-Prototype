@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SwikDefinitions.h"
+#import <MapKit/MapKit.h>
 
-@interface ProximityCell : UICollectionViewCell
+@interface ProximityCell : UICollectionViewCell <MKMapViewDelegate>
+
+@property (nonatomic, retain) MKMapView *mapView;
 
 @end
