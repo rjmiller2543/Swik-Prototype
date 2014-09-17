@@ -13,5 +13,10 @@
 @interface ProximityCell : UICollectionViewCell <MKMapViewDelegate>
 
 @property (nonatomic, retain) MKMapView *mapView;
+@property (nonatomic, retain) UIImageView *userImage;
+@property (nonatomic, retain) UILabel *userLabel;
+@property (nonatomic, retain) UILabel *locationLabel;
+@property (nonatomic, retain) UILabel *dateLabel;
+@property (nonatomic, retain) UILabel *viaLabel;
 
 @end

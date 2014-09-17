@@ -10,6 +10,8 @@
 #import "PopoverTableViewController.h"
 #import "WYPopoverController.h"
 #import "SwikDefinitions.h"
+#import "AppDelegate.h"
+#import "MessagesViewController.h"
 
 @interface StartBar : UIToolbar <WYPopoverControllerDelegate, UIGestureRecognizerDelegate>
 

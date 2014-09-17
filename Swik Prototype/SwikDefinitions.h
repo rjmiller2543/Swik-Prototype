@@ -15,8 +15,8 @@
 
 #define MESSAGE_CELL_WIDTH              102
 #define ATTACMENT_CELL_WIDTH            320
-#define PROXIMITY_CELL_WIDTH            212
-#define FRIEND_SUGGESTION_CELL_WIDTH    212
+#define PROXIMITY_CELL_WIDTH            213
+#define FRIEND_SUGGESTION_CELL_WIDTH    213
 #define GALLERY_CELL_WIDTH              320
 
 #define MESSAGE_CELL_HEIGHT             252
@@ -24,5 +24,22 @@
 #define PROXIMITY_CELL_HEIGHT           252
 #define FRIEND_SUGGESTION_CELL_HEIGHT   123
 #define GALLERY_CELL_HEIGHT             123
+
+#define USER_IMAGE_HEIGHT_WIDTH         102
+
+#define STRING_FROM_DATE(x)          ({  \
+                                        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];                    \
+                                        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];                            \
+                                        [dateFormatter setTimeStyle:NSDateFormatterNoStyle];                                \
+                                        [dateFormatter setDateFormat:@"MMM d"];                                          \
+                                        [dateFormatter stringFromDate:x];                                                   \
+                                        })
+
+#define TIME_FROM_DATE(x)           ({  \
+                                        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];    \
+                                        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];             \
+                                        [dateFormatter setDateFormat:@"h:mm a"];                            \
+                                        [dateFormatter stringFromDate:x];                                   \
+                                    })
 
 #endif

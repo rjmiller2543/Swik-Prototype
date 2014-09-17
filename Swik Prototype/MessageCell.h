@@ -12,5 +12,10 @@
 @interface MessageCell : UICollectionViewCell
 
 @property (nonatomic, retain) UIImageView *userImage;
+@property (nonatomic, retain) UIImageView *chatBubbleImage;
+@property (nonatomic, retain) UILabel *dateLabel;
+@property (nonatomic, retain) UILabel *timeLabel;
+@property (nonatomic, retain) UILabel *replyToLabel;
+@property (nonatomic, retain) UILabel *userName;
 
 @end

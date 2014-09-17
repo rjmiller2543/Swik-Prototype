@@ -16,6 +16,11 @@
     //Create temp array of objects (will eventually be some fetched objects
     _objectsArray = [[NSMutableArray alloc] initWithObjects:[[MessageCell alloc] init], [[FriendSuggestionCell alloc] init], /*[[FriendSuggestionCell alloc] init], */[[ProximityCell alloc] init], [[FriendSuggestionCell alloc] init], [[AttachmentCell alloc] init], [[FriendSuggestionCell alloc] init], [[MessageCell alloc] init], [[GalleryCell alloc] init], [[FriendSuggestionCell alloc] init], [[GalleryCell alloc] init], [[MessageCell alloc] init], nil];
     
+    //Add all of the views and load the start screen last so it's on the top
+    _messagesViewController = [[MessagesViewController alloc] initWithStyle:UITableViewStylePlain];
+    [_messagesViewController.view setFrame:CGRectMake(0, 70, 320, 700)];
+    //[self.window addSubview:_messagesViewController.view];
+    
     //Create The Custom layout
     StartScreenLayout *layout = [[StartScreenLayout alloc] init];
     
@@ -26,10 +31,12 @@
     viewController.extendedLayoutIncludesOpaqueBars = NO;
     //[viewController.view setBounds:CGRectMake(0, STARTBAR_HEIGHT + 40, self.window.screen.bounds.size.width, self.window.screen.bounds.size.height - STARTBAR_HEIGHT)];
     //viewController.view.frame = CGRectMake(0, 160, 320, self.window.screen.bounds.size.height - 130);
-    viewController.view.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:1.0 alpha:1.0];
-    viewController.collectionView.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:1.0 alpha:1.0];
-    [self.window setRootViewController:viewController];
-    [self.window addSubview:viewController.view];
+    //viewController.view.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:1.0 alpha:1.0];
+    //viewController.view.alpha = 0;
+    //viewController.collectionView.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:1.0 alpha:1.0];
+    _startScreenViewController = viewController;
+    [self.window setRootViewController:_startScreenViewController];
+    [self.window addSubview:_startScreenViewController.view];
     
     //Create and add the start bar
     _startBar = [[StartBar alloc] initWithFrame:CGRectMake(0, 0, 350, 62)];
@@ -86,6 +93,23 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)loadStartScreenViewController
+{
+    //[self.window.rootViewController presentViewController:_startScreenViewController animated:YES completion:^{
+    //    NSLog(@"completed going to startscreen controller?");
+    //}];
+    [self.window.rootViewController dismissViewControllerAnimated:NO completion:^{
+        NSLog(@"dismiss view controller?");
+    }];
+}
+
+-(void)loadMessagesViewController
+{
+    [self.window.rootViewController presentViewController:_messagesViewController animated:NO completion:^{
+        NSLog(@"completed going to messages controller?");
+    }];
 }
 
 @end

@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view setFrame:CGRectMake(0, 60, 320, 30)];
-    self.view.backgroundColor = BLUE;
+    self.view.backgroundColor = LIGHT_GREY;
     UIImageView * filterIconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
     filterIconImageView.image = [UIImage imageNamed:@"dry.png"];
     [self.view addSubview:filterIconImageView];

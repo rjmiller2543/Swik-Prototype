@@ -19,6 +19,9 @@
 #import "ProximityCell.h"
 #import "FriendSuggestionCell.h"
 #import "GalleryCell.h"
+#import "MessagesViewController.h"
+
+@class StartBar;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -31,5 +34,13 @@
 //For now to be used a test array of objects that will be placed into the cells of the start page
 //Later on may be used as the app delegate object array filled with objects from JSON or Parse fetch?
 @property (nonatomic, retain) NSMutableArray *objectsArray;
+
+//All of the Views that are available to be shown are stored in these for easy switching
+@property (nonatomic, retain) StartScreenViewController *startScreenViewController;
+@property (nonatomic, retain) MessagesViewController *messagesViewController;
+
+-(void)loadStartScreenViewController;
+-(void)loadMessagesViewController;
+
 
 @end

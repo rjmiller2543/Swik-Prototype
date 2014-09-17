@@ -32,8 +32,9 @@ static NSString * const gallerIdentifier = @"GalleryCell";
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     float height = [[[[AppDelegate sharedInstance] window] screen] bounds].size.height;
-    [self.collectionView setFrame:CGRectMake(0, 90, 320, height - 90)];
-    self.view.backgroundColor = GREY;
+    [self.collectionView setFrame:CGRectMake(0, 70, 320, height - 70)];
+    //self.view.backgroundColor = GREY;
+    self.collectionView.backgroundColor = GREY;
     
     //self.collectionView.dataSource = self;
     
@@ -46,6 +47,12 @@ static NSString * const gallerIdentifier = @"GalleryCell";
     [self.collectionView registerClass:[GalleryCell class] forCellWithReuseIdentifier:gallerIdentifier];
     
     // Do any additional setup after loading the view.
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    float height = [[[[AppDelegate sharedInstance] window] screen] bounds].size.height;
+    [self.collectionView setFrame:CGRectMake(0, 90, 320, height - 90)];
 }
 
 - (void)didReceiveMemoryWarning {

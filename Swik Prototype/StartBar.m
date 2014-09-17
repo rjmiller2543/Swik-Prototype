@@ -16,7 +16,11 @@
     if (self) {
         // Initialization code
         //self.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.0 alpha:1.0];
-        self.backgroundColor = TURUOISE;
+        self.backgroundColor = WHITE;
+        self.viewForBaselineLayout.backgroundColor = WHITE;
+        self.alpha = 1.0;
+        self.tintColor = GREEN;
+        self.barTintColor = WHITE;
         _swipeRightForSearchBar = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(ShowSearchBar)];
         [_swipeRightForSearchBar setEnabled:YES];
         _swipeRightForSearchBar.direction = UISwipeGestureRecognizerDirectionRight;
@@ -60,12 +64,13 @@
 {
     
     NSLog(@"up testing...");
-    
+    [[AppDelegate sharedInstance] loadStartScreenViewController];
 }
 
 -(void)testAction1
 {
     NSLog(@"up test 1..");
+    [[AppDelegate sharedInstance] loadMessagesViewController];
 }
 
 -(void)testAction2

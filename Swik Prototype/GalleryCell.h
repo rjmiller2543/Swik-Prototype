@@ -11,4 +11,11 @@
 
 @interface GalleryCell : UICollectionViewCell
 
+@property (nonatomic, retain) UIImageView *userImage;
+@property (nonatomic, retain) UIImageView *galleryImage;
+@property (nonatomic, retain) UILabel *userLabel;
+@property (nonatomic, retain) UILabel *galleryLabel;
+@property (nonatomic, retain) UIImageView *tagImage;
+@property (nonatomic, retain) UILabel *dateLabel;
+
 @end

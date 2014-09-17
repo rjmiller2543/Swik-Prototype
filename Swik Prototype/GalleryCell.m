@@ -16,8 +16,11 @@
         // Initialization code
         //[self setFrame:CGRectMake(0, 0, 318, 40)];
         //self.backgroundColor = [UIColor magentaColor];
-        self.backgroundColor = GREEN;
+        self.backgroundColor = WHITE;
         /* Add an image for Picture and determine if it's an image or video and add accordingly */
+        _userImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 10, USER_IMAGE_HEIGHT_WIDTH, USER_IMAGE_HEIGHT_WIDTH)];
+        _userImage.backgroundColor = TURUOISE;
+        [self.contentView addSubview:_userImage];
     }
     return self;
 }

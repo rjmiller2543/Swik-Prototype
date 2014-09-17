@@ -20,7 +20,6 @@
 		500D67AE19980B9300940549 /* ProximityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D67AD19980B9300940549 /* ProximityCell.m */; };
 		500D67B119980BA400940549 /* FriendSuggestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D67B019980BA400940549 /* FriendSuggestionCell.m */; };
 		500D67B419980D9500940549 /* GalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D67B319980D9500940549 /* GalleryCell.m */; };
-		500D67B71998112000940549 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D67B61998112000940549 /* CollectionViewController.m */; };
 		500D67BA199817FE00940549 /* StartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 500D67B9199817FE00940549 /* StartScreenViewController.m */; };
 		500D67BC199CFFEF00940549 /* life_is_random.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D67BB199CFFEF00940549 /* life_is_random.png */; };
 		500D67BE199D002800940549 /* random-facts-you-didnt-know-45.png in Resources */ = {isa = PBXBuildFile; fileRef = 500D67BD199D002800940549 /* random-facts-you-didnt-know-45.png */; };
@@ -47,7 +46,8 @@
 		506F54D51985E03E00D98368 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54D41985E03E00D98368 /* CoreLocation.framework */; };
 		506F54D71985E04700D98368 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506F54D61985E04700D98368 /* AudioToolbox.framework */; };
 		506F54E0198603F900D98368 /* StartBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 506F54DF198603F900D98368 /* StartBar.m */; };
-		50F54E3F199AD72300B6A47B /* 280x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F54E3E199AD72300B6A47B /* 280x40.png */; };
+		5085439E19B900530009851A /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5085439D19B900530009851A /* MessagesViewController.m */; };
+		508543A119B9027B0009851A /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 508543A019B9027B0009851A /* MessageTableViewCell.m */; };
 		50F54E4519A2F26500B6A47B /* StartScreenLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F54E4419A2F26500B6A47B /* StartScreenLayout.m */; };
 		DE4B37A979F746779553FFD0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9ACD738E7DF4E9DA9F2605B /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -84,8 +84,6 @@
 		500D67B019980BA400940549 /* FriendSuggestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendSuggestionCell.m; sourceTree = "<group>"; };
 		500D67B219980D9500940549 /* GalleryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryCell.h; sourceTree = "<group>"; };
 		500D67B319980D9500940549 /* GalleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCell.m; sourceTree = "<group>"; };
-		500D67B51998112000940549 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
-		500D67B61998112000940549 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		500D67B8199817FE00940549 /* StartScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScreenViewController.h; sourceTree = "<group>"; };
 		500D67B9199817FE00940549 /* StartScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScreenViewController.m; sourceTree = "<group>"; };
 		500D67BB199CFFEF00940549 /* life_is_random.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = life_is_random.png; sourceTree = "<group>"; };
@@ -121,7 +119,10 @@
 		506F54DE198603F900D98368 /* StartBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartBar.h; sourceTree = "<group>"; };
 		506F54DF198603F900D98368 /* StartBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartBar.m; sourceTree = "<group>"; };
 		506F54E11986093E00D98368 /* SwikDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwikDefinitions.h; sourceTree = "<group>"; };
-		50F54E3E199AD72300B6A47B /* 280x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 280x40.png; sourceTree = "<group>"; };
+		5085439C19B900530009851A /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
+		5085439D19B900530009851A /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
+		5085439F19B9027B0009851A /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
+		508543A019B9027B0009851A /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
 		50F54E4319A2F26500B6A47B /* StartScreenLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScreenLayout.h; sourceTree = "<group>"; };
 		50F54E4419A2F26500B6A47B /* StartScreenLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScreenLayout.m; sourceTree = "<group>"; };
 		6CC2B624F0A44A0B9758E611 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -223,7 +224,6 @@
 				506F54DA1986033200D98368 /* View Controllers */,
 				506F54A01985DCA500D98368 /* AppDelegate.h */,
 				506F54A11985DCA500D98368 /* AppDelegate.m */,
-				50F54E3E199AD72300B6A47B /* 280x40.png */,
 				506F54A31985DCA500D98368 /* Main.storyboard */,
 				506F54A91985DCA500D98368 /* Images.xcassets */,
 				506F54981985DCA500D98368 /* Supporting Files */,
@@ -269,10 +269,10 @@
 				506F54A71985DCA500D98368 /* ViewController.m */,
 				500D679D1996609A00940549 /* PopoverTableViewController.h */,
 				500D679E1996609A00940549 /* PopoverTableViewController.m */,
-				500D67B51998112000940549 /* CollectionViewController.h */,
-				500D67B61998112000940549 /* CollectionViewController.m */,
 				500D67B8199817FE00940549 /* StartScreenViewController.h */,
 				500D67B9199817FE00940549 /* StartScreenViewController.m */,
+				5085439C19B900530009851A /* MessagesViewController.h */,
+				5085439D19B900530009851A /* MessagesViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -314,6 +314,8 @@
 				500D67B319980D9500940549 /* GalleryCell.m */,
 				50F54E4319A2F26500B6A47B /* StartScreenLayout.h */,
 				50F54E4419A2F26500B6A47B /* StartScreenLayout.m */,
+				5085439F19B9027B0009851A /* MessageTableViewCell.h */,
+				508543A019B9027B0009851A /* MessageTableViewCell.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -401,7 +403,6 @@
 				500D678F1992FCCE00940549 /* electronics.png in Resources */,
 				500D67911992FCD800940549 /* puzzle.png in Resources */,
 				506F54AA1985DCA500D98368 /* Images.xcassets in Resources */,
-				50F54E3F199AD72300B6A47B /* 280x40.png in Resources */,
 				500D67951992FD0B00940549 /* settings.png in Resources */,
 				500D67BC199CFFEF00940549 /* life_is_random.png in Resources */,
 				506F549C1985DCA500D98368 /* InfoPlist.strings in Resources */,
@@ -467,7 +468,8 @@
 				50F54E4519A2F26500B6A47B /* StartScreenLayout.m in Sources */,
 				500D67B119980BA400940549 /* FriendSuggestionCell.m in Sources */,
 				500D679F1996609A00940549 /* PopoverTableViewController.m in Sources */,
-				500D67B71998112000940549 /* CollectionViewController.m in Sources */,
+				508543A119B9027B0009851A /* MessageTableViewCell.m in Sources */,
+				5085439E19B900530009851A /* MessagesViewController.m in Sources */,
 				500D67B419980D9500940549 /* GalleryCell.m in Sources */,
 				506F549E1985DCA500D98368 /* main.m in Sources */,
 				500D67A219966C8B00940549 /* PopoverTableViewCell.m in Sources */,

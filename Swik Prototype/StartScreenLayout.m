@@ -60,7 +60,7 @@
 -(BOOL)canUseDoubleColumnWithCurrentWidth:(NSUInteger)currentWidth andPreviousWidth:(NSUInteger)previousWidth
 {
     BOOL retVal = NO;
-    int totalInsetWidth = 6;
+    int totalInsetWidth = 5;
     int totalWidth = [[[[AppDelegate sharedInstance] window] screen] bounds].size.width;
     
     if ((currentWidth + previousWidth + totalInsetWidth) <= totalWidth) {
@@ -407,7 +407,7 @@
     
     NSUInteger columnIndex = [self longestColumnIndex];
     float columnHeight = [_columns[columnIndex] floatValue];
-    retVal.height = columnHeight + 24;
+    retVal.height = columnHeight + 4;
     NSLog(@"content height: %f", retVal.height);
     
     return retVal;

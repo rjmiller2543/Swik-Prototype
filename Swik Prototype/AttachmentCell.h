@@ -12,5 +12,10 @@
 @interface AttachmentCell : UICollectionViewCell
 
 @property (nonatomic, retain) UIImageView *attachmentImage;
+@property (nonatomic, retain) UIImageView *userImage;
+@property (nonatomic, retain) UIImageView *paperClipImage;
+@property (nonatomic, retain) UILabel *dateLabel;
+@property (nonatomic, retain) UILabel *timeLabel;
+@property (nonatomic, retain) UILabel *userName;
 
 @end
